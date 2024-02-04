@@ -6,22 +6,24 @@ import os
 
 # %%
 
-intakes = pd.read_csv('AAC_Intakes.csv')
-outcomes = pd.read_csv('AAC_Outcomes.csv')
+intakes1 = pd.read_csv('AAC_Intakes.csv')
+outcomes1 = pd.read_csv('AAC_Outcomes.csv')
 
 # All datasets are from 2023 to 02/04/2024
 
 
 #%%
 
-intakes.info()
+intakes1.info()
 
 #%%
-intakes.head()
+intakes1.head()
 
 #%%
-outcomes.info()
+outcomes1.info()
 
 
 # %%
-outcomes.head()
+outcomes1.head()
+
+#%%
