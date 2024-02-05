@@ -1,0 +1,457 @@
+Age,Sex,Breed,Image
+5 Years8 Months,Female,"['Hound, Plott ', ' Terrier, American Staffordshire']",dog_images/20231129110855.jpg
+3 Years0 Months,Female,['Mixed Breed (Small)'],dog_images/20231004163817.jpg
+11 Years8 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240123175322.jpg
+9 Years0 Months,Male,"['Shepherd, German ', ' Mix']",dog_images/20231206073515.jpg
+8 Years8 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20230211113550.jpg
+9 Years1 Months,Female,['Mixed Breed (Medium)'],dog_images/20231228183902.jpg
+8 Years10 Months,Female,"['Retriever ', ' Mix']",dog_images/20230919145347_0.jpg
+8 Years3 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20231122225050.jpg
+8 Years0 Months,Female,"['Coonhound, Bluetick ', ' Mix']",dog_images/20231206075249.jpg
+8 Years9 Months,Male,"['Boxer ', ' Mix']",dog_images/20231023194400.jpg
+9 Years8 Months,Female,"['Cattle Dog, Australian (Blue Heeler) ', ' Mix']",dog_images/20230712150405.jpg
+8 Years7 Months,Male,"['Hound ', ' Great Dane']",dog_images/20240124072556.jpg
+8 Years2 Months,Male,"['Mixed Breed (Large) ', ' Great Dane']",dog_images/20221214112759.jpg
+7 Years1 Months,Male,"['Catahoula Leopard Dog ', ' Mix']",dog_images/20230929090904.jpg
+8 Years11 Months,Female,"['Terrier, Pit Bull']",dog_images/20240117072830.jpg
+7 Years4 Months,Male,"['Chihuahua, Short Coat ', ' Dachshund, Miniature Smooth Haired']",dog_images/20240120103848.jpg
+6 Years5 Months,Female,['Mixed Breed (Medium)'],dog_images/20240108191252.jpg
+6 Years3 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240121153431.jpg
+6 Years2 Months,Male,"['Terrier, Pit Bull']",dog_images/20231216094551.jpg
+9 Years8 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20171202214224.jpg
+5 Years11 Months,Female,['Mixed Breed (Medium)'],dog_images/20240118111257.jpg
+9 Years9 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240112035726.jpg
+5 Years9 Months,Female,"['Basenji ', ' Malinois, Belgian']",dog_images/20231205152406.jpg
+8 Years6 Months,Male,"['Mastiff, Neapolitan ', ' Pinscher, Doberman']",dog_images/20221212223040.jpg
+6 Years6 Months,Male,"['Terrier, Wirehaired ', ' Mix']",dog_images/20231031143319.jpg
+6 Years6 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20181101234255.jpg
+5 Years11 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20201022203646.jpg
+8 Years8 Months,Female,"['Chihuahua ', ' Mix']",dog_images/20240108085530.jpg
+7 Years5 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230805060329.jpg
+5 Years2 Months,Female,"['Retriever, Labrador ', ' Beagle']",dog_images/20240118082533.jpg
+5 Years0 Months,Male,['Cattle Dog'],dog_images/20221207095758.jpg
+5 Years1 Months,Male,"['Shepherd ', ' Mix']",dog_images/20231119085246.jpg
+6 Years11 Months,Male,['Mixed Breed (Medium)'],dog_images/20240110133020.jpg
+7 Years4 Months,Male,"['Cattle Dog ', ' Mix']",dog_images/20240117210839.jpg
+8 Years1 Months,Male,"['Shepherd ', ' Retriever, Labrador']",dog_images/20221212222003.jpg
+5 Years2 Months,Male,['Black Mouth Cur'],dog_images/20240108184026.jpg
+11 Years9 Months,Male,['Blue Lacy'],dog_images/20240114210414.jpg
+6 Years1 Months,Male,"['Collie, Border ', ' Saint Bernard']",dog_images/20230903055730.jpg
+4 Years0 Months,Female,"['Shepherd, German']",dog_images/20230214060525.jpg
+5 Years11 Months,Male,"['Terrier, American Staffordshire ', ' Mix']",dog_images/20220509135854.jpg
+4 Years11 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20231206075415.jpg
+4 Years1 Months,Male,"['American Blue Heeler ', ' Retriever, Black Labrador']",dog_images/20240109165853.jpg
+4 Years2 Months,Male,"['Black Mouth Cur ', ' Mix']",dog_images/20231221091428.jpg
+3 Years10 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20231106134659.jpg
+3 Years10 Months,Female,"['Husky, Siberian ', ' Mix']",dog_images/20240118180903.jpg
+3 Years9 Months,Female,"['Hound, Plott ', ' Mix']",dog_images/20240117080910.jpg
+3 Years7 Months,Male,"['Collie ', ' Mix']",dog_images/20231014184757.jpg
+4 Years11 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240107195154.jpg
+5 Years6 Months,Female,"['Terrier, Pit Bull']",dog_images/20201019152702_0.jpg
+5 Years10 Months,Male,"['Retriever, Black Labrador ', ' Mix']",dog_images/20201101144058_0.jpg
+8 Years3 Months,Male,"['Cattle Dog, Australian (Blue Heeler) ', ' Mix']",dog_images/20230509114456.jpg
+3 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20240110083044.jpg
+6 Years2 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240102080134.jpg
+3 Years8 Months,Male,"['Shepherd, Anatolian ', ' Mix']",dog_images/20230906081910.jpg
+5 Years9 Months,Female,"['Boxer ', ' Mix']",dog_images/20240101223249.jpg
+4 Years10 Months,Female,"['Hound ', ' Mixed Breed (Medium)']",dog_images/20240126094014.jpg
+8 Years1 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20221206093318_0.jpg
+6 Years9 Months,Female,"['Blue Lacy ', ' Mix']",dog_images/20230913225437.jpg
+3 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240102112758.jpg
+4 Years6 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20230926121457.jpg
+6 Years6 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230827212834.jpg
+3 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/20231120112235.jpg
+5 Years10 Months,Female,"['Pointer ', ' Mix']",dog_images/20231226092346.jpg
+7 Years10 Months,Male,['Dogo Argentino'],dog_images/20231128081029.jpg
+4 Years11 Months,Female,"['Terrier, Pit Bull']",dog_images/20240102150859.jpg
+2 Years11 Months,Male,"['Cattle Dog, Australian (Blue Heeler) ', ' Mix']",dog_images/20230311180150.jpg
+5 Years0 Months,Male,"['Retriever, Labrador ', ' Shepherd']",dog_images/20230904134344.jpg
+4 Years8 Months,Male,"['Terrier ', ' Mix']",dog_images/20231204105116.jpg
+5 Years1 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20210725165412.jpg
+7 Years7 Months,Female,"['Shepherd, Australian ', ' Mix']",dog_images/20220104145816.jpg
+5 Years6 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20230706100902.jpg
+5 Years6 Months,Female,"['Terrier, Pit Bull']",dog_images/20211202102418.jpg
+3 Years1 Months,Male,"['Terrier, Pit Bull']",dog_images/20231007080230.jpg
+4 Years6 Months,Female,"['Retriever ', ' Terrier, Pit Bull']",dog_images/20230825211815.jpg
+2 Years10 Months,Female,"['Terrier, Pit Bull']",dog_images/20231206075620.jpg
+7 Years5 Months,Male,"['Pointer ', ' Mix']",dog_images/20230811084551.jpg
+7 Years0 Months,Male,['Mixed Breed (Large)'],dog_images/20240124084419.jpg
+3 Years2 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20231127201004.jpg
+3 Years5 Months,Female,"['Boxer ', ' Mix']",dog_images/20230819043619.jpg
+7 Years4 Months,Male,"['Ridgeback, Rhodesian']",dog_images/20240121153838.jpg
+9 Years11 Months,Male,"['Mixed Breed (Large) ', ' Mix']",dog_images/20231222111853_0.jpg
+7 Years10 Months,Female,"['Retriever, Chocolate Labrador ', ' Mix']",dog_images/20231103094550.jpg
+11 Years3 Months,Male,"['Wolfhound, Irish ', ' Mix']",dog_images/20240122221826.jpg
+12 Years5 Months,Female,['Bulldog'],dog_images/20210817104730_0.jpg
+3 Years3 Months,Male,"['Chow Chow ', ' Shepherd, German']",dog_images/20231113084920.jpg
+2 Years5 Months,Male,"['Terrier, American Pit Bull']",dog_images/20230326053428.jpg
+2 Years2 Months,Female,['Shepherd'],dog_images/20230322061016.jpg
+2 Years6 Months,Female,"['Hound ', ' Mix']",dog_images/20231208081135.jpg
+2 Years1 Months,Female,"['Cattle Dog ', ' Retriever, Labrador']",dog_images/20240110152045.jpg
+2 Years11 Months,Female,"['Terrier, American Pit Bull']",dog_images/20220112105307.jpg
+2 Years0 Months,Female,"['Mixed Breed (Medium) ', ' Retriever']",dog_images/20230829104501.jpg
+3 Years10 Months,Male,"['Shepherd, German ', ' Mix']",dog_images/20220615100644.jpg
+3 Years6 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230701183600.jpg
+4 Years0 Months,Female,"['Dachshund ', ' Mixed Breed (Medium)']",dog_images/20230820054953.jpg
+8 Years8 Months,Female,"['Mixed Breed (Medium) ', ' Mixed Breed (Medium)']",dog_images/20231207203653.jpg
+9 Years11 Months,Male,"['Carolina Dog ', ' Mix']",dog_images/20240107212918.jpg
+7 Years7 Months,Male,"['Chihuahua ', ' Mix']",dog_images/20231203094616.jpg
+3 Years4 Months,Male,"['Catahoula Leopard Dog ', ' Mix']",dog_images/20230606140314.jpg
+14 Years0 Months,Female,"['Schipperke ', ' Retriever, Black Labrador']",dog_images/20220414163029.jpg
+9 Years10 Months,Female,"['Terrier, Pit Bull']",dog_images/20231218192407.jpg
+4 Years4 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20240116090625.jpg
+2 Years8 Months,Male,"['Cattle Dog ', ' Mix']",dog_images/20231207151224.jpg
+1 Years10 Months,Female,"['Shepherd, Anatolian ', ' Mixed Breed (Medium)']",dog_images/20240124125649.jpg
+3 Years11 Months,Male,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/20231224225549.jpg
+2 Years2 Months,Male,"['Retriever, Labrador']",dog_images/20230926160808.jpg
+2 Years9 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230911152830.jpg
+1 Years10 Months,Male,"['Cattle Dog, Australian (Red Heeler)']",dog_images/20240117090431.jpg
+1 Years10 Months,Female,"['Pyrenees, Great ', ' Pinscher, Doberman']",dog_images/20240108090403.jpg
+1 Years10 Months,Female,"['Retriever, Black Labrador']",dog_images/20231227135956.jpg
+3 Years8 Months,Male,"['Cattle Dog, Australian (Red Heeler) ', ' Mixed Breed (Medium)']",dog_images/20231124083325.jpg
+3 Years4 Months,Female,"['Hound, Plott ', ' Mix']",dog_images/20221209105925.jpg
+2 Years5 Months,Female,"['Terrier ', ' Mix']",dog_images/20221216080602.jpg
+11 Years7 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20220625132858.jpg
+1 Years7 Months,Female,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/20220826082735.jpg
+4 Years7 Months,Female,"['Retriever, Labrador']",dog_images/20230818084132.jpg
+2 Years8 Months,Male,"['Retriever, Labrador ', ' Mixed Breed (Medium)']",dog_images/20230414092113.jpg
+4 Years11 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20220716114335.jpg
+5 Years8 Months,Female,"['Terrier, American Pit Bull']",dog_images/20230822082811.jpg
+7 Years7 Months,Male,"['Chihuahua ', ' Mix']",dog_images/20220730144036.jpg
+4 Years0 Months,Male,"['Hound, Black and Tan Coonhound ', ' Mix']",dog_images/20231229132826.jpg
+3 Years9 Months,Male,"['Collie, Border ', ' Mixed Breed (Medium)']",dog_images/20230816114909.jpg
+5 Years5 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20240102153358.jpg
+13 Years4 Months,Female,"['Greyhound, Italian ', ' Terrier, Pit Bull']",dog_images/20240117213007.jpg
+1 Years7 Months,Female,"['Shepherd ', ' Catahoula Leopard Dog']",dog_images/20231205153449_0.jpg
+2 Years7 Months,Male,['Mixed Breed (Medium)'],dog_images/20230407141718.jpg
+2 Years8 Months,Male,"['Terrier, Pit Bull']",dog_images/20230227172952.jpg
+5 Years9 Months,Male,"['Bulldog, American']",dog_images/20231025151954.jpg
+4 Years9 Months,Male,"['Bulldog, American']",dog_images/20230422112031.jpg
+9 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/20230103083842.jpg
+7 Years1 Months,Male,"['Shepherd, Australian ', ' Retriever, Golden']",dog_images/20240123091500.jpg
+2 Years0 Months,Female,"['Terrier, Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20231229085952.jpg
+1 Years5 Months,Female,['Chinese Shar-Pei'],dog_images/20231004094304.jpg
+3 Years9 Months,Male,"['Shepherd ', ' Mix']",dog_images/20230528183820.jpg
+3 Years2 Months,Male,"['Terrier, Pit Bull']",dog_images/20230624090755.jpg
+3 Years3 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20231004212403.jpg
+2 Years1 Months,Female,"['Black Mouth Cur ', ' Mix']",dog_images/20231117082641.jpg
+1 Years8 Months,Male,"['Bulldog, English']",dog_images/20230815161027.jpg
+6 Years1 Months,Male,"['Terrier, Pit Bull']",dog_images/20221213090909.jpg
+2 Years10 Months,Female,"['Terrier, Pit Bull']",dog_images/20230420165311.jpg
+5 Years3 Months,Male,"['Terrier, Pit Bull ', ' Retriever, Labrador']",dog_images/20231030034039.jpg
+4 Years2 Months,Male,"['Retriever, Black Labrador ', ' Mix']",dog_images/20231027131411.jpg
+3 Years5 Months,Female,"['Terrier, Pit Bull']",dog_images/20230105141108.jpg
+3 Years1 Months,Female,"['Hound, Plott ', ' Mix']",dog_images/20240119112325.jpg
+1 Years10 Months,Male,"['Pyrenees, Great ', ' Shepherd, German']",dog_images/20231127093034.jpg
+3 Years3 Months,Male,"['Terrier, Pit Bull']",dog_images/20231221092109.jpg
+3 Years2 Months,Male,"['Retriever, Labrador']",dog_images/20240122091059.jpg
+2 Years0 Months,Male,"['Husky ', ' Mix']",dog_images/20230309135311.jpg
+1 Years2 Months,Female,['Terrier'],dog_images/20230518185937.jpg
+5 Years0 Months,Male,"['Collie ', ' Mix']",dog_images/20240111105124.jpg
+2 Years0 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20231118190624.jpg
+3 Years6 Months,Male,"['Terrier, Pit Bull']",dog_images/20231204105540.jpg
+4 Years11 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20231113044726.jpg
+2 Years2 Months,Male,"['Terrier ', ' Boxer']",dog_images/20231219154212.jpg
+1 Years2 Months,Female,"['Terrier, American Staffordshire']",dog_images/20231219144026_0.jpg
+3 Years0 Months,Female,"['Hound ', ' Mix']",dog_images/20231010142127.jpg
+2 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20230415113730.jpg
+1 Years11 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20231201074706.jpg
+6 Years11 Months,Male,"['Shepherd, German ', ' Mix']",dog_images/20240102053357.jpg
+8 Years0 Months,Male,"['Dachshund ', ' Beagle']",dog_images/20230310092121.jpg
+0 Years10 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20231227093853.jpg
+1 Years3 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230707092738.jpg
+8 Years11 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240117081755.jpg
+6 Years0 Months,Female,"['Collie ', ' Mix']",dog_images/20231127062357.jpg
+2 Years10 Months,Male,['Terrier'],dog_images/20230602075137.jpg
+1 Years2 Months,Female,"['Terrier ', ' Mix']",dog_images/20231218003113.jpg
+1 Years2 Months,Male,"['Retriever, Labrador']",dog_images/20231027155112.jpg
+3 Years3 Months,Male,"['Hound, Plott ', ' Mix']",dog_images/20240126110951.jpg
+1 Years0 Months,Male,"['Terrier ', ' Mixed Breed (Medium)']",dog_images/20240102152016.jpg
+3 Years0 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20230804052842.jpg
+3 Years9 Months,Male,"['Terrier, Pit Bull']",dog_images/20240105233822.jpg
+4 Years9 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20231005194407.jpg
+0 Years11 Months,Male,"['Chinese Shar-Pei ', ' Retriever, Labrador']",dog_images/20230902164119.jpg
+4 Years9 Months,Male,"['Catahoula Leopard Dog ', ' Hound, Basset']",dog_images/20230702181755.jpg
+2 Years9 Months,Female,['Blue Lacy'],dog_images/20230526064615.jpg
+4 Years9 Months,Female,"['Terrier, Pit Bull']",dog_images/20240126134102.jpg
+4 Years9 Months,Female,"['Chihuahua ', ' Mix']",dog_images/20230606161613.jpg
+2 Years9 Months,Male,"['Retriever, Black Labrador ', ' Terrier, Pit Bull']",dog_images/20240114133900.jpg
+1 Years7 Months,Male,"['Terrier, Pit Bull']",dog_images/20231202111744.jpg
+5 Years11 Months,Male,['Shepherd'],dog_images/20230428094744.jpg
+3 Years9 Months,Male,"['Shepherd ', ' Mix']",dog_images/20230901125543.jpg
+4 Years2 Months,Male,"['Terrier, Pit Bull']",dog_images/20230924190238.jpg
+1 Years2 Months,Male,"['Retriever, Labrador ', ' Terrier']",dog_images/20230524163259.jpg
+0 Years10 Months,Male,"['Terrier ', ' Mix']",dog_images/20230510144304.jpg
+1 Years9 Months,Female,['Mixed Breed (Medium)'],dog_images/20230616141341.jpg
+7 Years3 Months,Male,"['Shepherd, German']",dog_images/20231127094126.jpg
+2 Years8 Months,Female,"['Terrier, Pit Bull']",dog_images/20230914211948.jpg
+0 Years10 Months,Male,"['Retriever, Black Labrador ', ' Mix']",dog_images/20240125133208.jpg
+0 Years10 Months,Male,"['Pyrenees, Great']",dog_images/20231201080114.jpg
+1 Years8 Months,Male,"['Terrier ', ' Mixed Breed (Medium)']",dog_images/20240114221158.jpg
+2 Years5 Months,Male,"['Terrier, American Staffordshire']",dog_images/20240119122008.jpg
+1 Years8 Months,Male,"['Shepherd, German ', ' Husky, Siberian']",dog_images/20240117073959.jpg
+2 Years10 Months,Female,"['Retriever, Chocolate Labrador ', ' Mix']",dog_images/20231227093438.jpg
+5 Years1 Months,Male,"['Husky, Alaskan']",dog_images/20231126193330.jpg
+5 Years8 Months,Female,"['Terrier, Boston ', ' Terrier, Pit Bull']",dog_images/20231005105334_0.jpg
+4 Years5 Months,Female,['Mixed Breed (Medium)'],dog_images/20231020123203.jpg
+0 Years9 Months,Female,"['Retriever, Black Labrador']",dog_images/20230717074817.jpg
+4 Years9 Months,Male,"['Shepherd, Anatolian ', ' Shepherd, German']",dog_images/20240103075149.jpg
+2 Years8 Months,Male,['Pointer'],dog_images/20231006080854.jpg
+3 Years7 Months,Male,"['Hound ', ' Mix']",dog_images/20230616105953.jpg
+3 Years7 Months,Female,['Mixed Breed (Medium)'],dog_images/20231110062015.jpg
+5 Years9 Months,Male,"['Retriever, Yellow Labrador']",dog_images/20230612151358_0.jpg
+0 Years9 Months,Female,"['Terrier, Pit Bull']",dog_images/20231017155005.jpg
+3 Years7 Months,Male,"['Terrier, Pit Bull']",dog_images/20230804054637.jpg
+2 Years1 Months,Male,"['Shepherd ', ' Mix']",dog_images/20240112064537.jpg
+2 Years7 Months,Male,"['Terrier ', ' Mix']",dog_images/20240103174349_0.jpg
+2 Years9 Months,Female,"['Terrier, American Pit Bull']",dog_images/20231127094658.jpg
+2 Years9 Months,Male,"['Terrier, Pit Bull ', ' Retriever, Labrador']",dog_images/20240110194549.jpg
+3 Years0 Months,Male,['Mixed Breed (Medium)'],dog_images/20240114181358.jpg
+1 Years6 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20231107155908.jpg
+3 Years7 Months,Female,"['Bulldog ', ' Mix']",dog_images/20230721095621.jpg
+3 Years7 Months,Male,"['Terrier, Bull']",dog_images/20240121155207.jpg
+3 Years10 Months,Male,"['Terrier, Pit Bull']",dog_images/20230804054217.jpg
+1 Years8 Months,Male,"['Shepherd, Dutch']",dog_images/20230727100112.jpg
+3 Years10 Months,Female,['Shepherd'],dog_images/20230514142635.jpg
+4 Years10 Months,Female,"['Terrier, American Staffordshire ', ' Mix']",dog_images/20230824084016.jpg
+4 Years4 Months,Male,"['Collie, Border ', ' Pyrenees, Great']",dog_images/20230823161103.jpg
+0 Years10 Months,Female,"['Catahoula Leopard Dog ', ' Husky']",dog_images/20231210104040.jpg
+10 Years5 Months,Male,['Chihuahua'],dog_images/20231118174317.jpg
+1 Years1 Months,Female,"['Kelpie, Australian']",dog_images/20230731214819_0.jpg
+2 Years6 Months,Male,"['Husky, Siberian ', ' Retriever, Labrador']",dog_images/20231127093515.jpg
+2 Years6 Months,Male,"['Terrier, American Staffordshire']",dog_images/20230930160737.jpg
+2 Years5 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20231108115422.jpg
+0 Years10 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20230811085216.jpg
+4 Years0 Months,Male,"['Bulldog, American']",dog_images/20230920214017.jpg
+2 Years5 Months,Female,"['Retriever, Labrador ', ' Bulldog, American']",dog_images/20230909203811.jpg
+2 Years9 Months,Male,['Mixed Breed (Medium)'],dog_images/20240102153232.jpg
+2 Years5 Months,Male,"['Husky, Siberian ', ' Retriever, Yellow Labrador']",dog_images/20231117155753.jpg
+0 Years6 Months,Male,['Mixed Breed (Medium)'],dog_images/20231213075040.jpg
+0 Years6 Months,Male,['Mixed Breed (Medium)'],dog_images/20240124090235.jpg
+2 Years10 Months,Male,"['Terrier, Pit Bull']",dog_images/20231218110632.jpg
+1 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20231202161537.jpg
+1 Years0 Months,Male,['Boxer'],dog_images/20230929083534.jpg
+1 Years5 Months,Female,"['Husky ', ' Mix']",dog_images/20231208130544.jpg
+1 Years5 Months,Male,"['Retriever, Labrador ', ' Chinese Shar-Pei']",dog_images/20240124080228.jpg
+4 Years5 Months,Female,['Chinese Shar-Pei'],dog_images/20230822210848.jpg
+1 Years6 Months,Female,['American Blue Heeler'],dog_images/20231024134129.jpg
+4 Years4 Months,Male,"['Hound, Plott']",dog_images/20230823120127.jpg
+1 Years3 Months,Female,"['Shepherd, Anatolian']",dog_images/20230831141407.jpg
+10 Years5 Months,Female,"['Boxer ', ' Mix']",dog_images/20231103101020.jpg
+2 Years6 Months,Male,"['Terrier, Pit Bull']",dog_images/20230924134113.jpg
+1 Years4 Months,Male,['Mixed Breed (Medium)'],dog_images/20231102205400.jpg
+2 Years7 Months,Male,"['Hound, Basset ', ' Mix']",dog_images/20230921103241.jpg
+0 Years8 Months,Female,['Boxer'],dog_images/20230915083640_0.jpg
+0 Years11 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20240117080351.jpg
+2 Years4 Months,Male,"['Retriever, Black Labrador ', ' Mix']",dog_images/20230909091549.jpg
+0 Years7 Months,Male,"['Terrier, Pit Bull']",dog_images/20231020122015.jpg
+1 Years10 Months,Female,['Mixed Breed (Medium)'],dog_images/20240125112154.jpg
+7 Years4 Months,Female,"['Pug ', ' Mix']",dog_images/20230928075701.jpg
+12 Years6 Months,Female,"['Chow Chow ', ' Mixed Breed (Medium)']",dog_images/20231205154534_0.jpg
+2 Years7 Months,Male,"['Retriever, Labrador ', ' Terrier, Pit Bull']",dog_images/20230915142135.jpg
+1 Years10 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20231221094328.jpg
+0 Years9 Months,Male,"['Terrier ', ' Hound']",dog_images/20231130082732.jpg
+2 Years4 Months,Female,"['Retriever, Black Labrador ', ' Retriever, Golden']",dog_images/20231126092144.jpg
+0 Years8 Months,Female,['Mixed Breed (Medium)'],dog_images/20230915150746.jpg
+1 Years1 Months,Male,"['Shepherd, German']",dog_images/20231214124703.jpg
+3 Years0 Months,Male,"['Shepherd, German']",dog_images/20231005135632.jpg
+0 Years10 Months,Female,"['Shepherd, German']",dog_images/20231006155642.jpg
+7 Years5 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20231020164817_0.jpg
+1 Years2 Months,Female,"['Husky ', ' Mix']",dog_images/20231205134937.jpg
+3 Years4 Months,Male,"['Retriever, Black Labrador']",dog_images/20230929092818.jpg
+1 Years9 Months,Male,"['American Blue Heeler ', ' Mix']",dog_images/20230921155212.jpg
+1 Years4 Months,Male,"['Retriever, Labrador ', ' Hound, Plott']",dog_images/20231222071247.jpg
+2 Years6 Months,Male,"['Shepherd, Anatolian ', ' Mix']",dog_images/20230923142218.jpg
+0 Years5 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240124121310.jpg
+2 Years6 Months,Male,"['Terrier, American Staffordshire ', ' Mixed Breed (Medium)']",dog_images/20231031190459.jpg
+7 Years10 Months,Male,"['Retriever, Chocolate Labrador']",dog_images/20230920104809.jpg
+6 Years4 Months,Male,['Mixed Breed (Medium)'],dog_images/20231201060040.jpg
+0 Years9 Months,Female,['Mixed Breed (Medium)'],dog_images/20240120184818.jpg
+0 Years11 Months,Female,"['Mixed Breed (Medium) ', ' Mix']",dog_images/20231005092323.jpg
+4 Years5 Months,Female,['Mixed Breed (Medium)'],dog_images/20240122200951.jpg
+0 Years8 Months,Male,"['Retriever, Chocolate Labrador ', ' Mix']",dog_images/20240124075004.jpg
+0 Years11 Months,Male,"['Bulldog, American ', ' Mix']",dog_images/20230930163020.jpg
+6 Years4 Months,Female,"['Chihuahua ', ' Mix']",dog_images/20231203124817.jpg
+0 Years3 Months,Male,['Mixed Breed (Medium)'],dog_images/20240104072044.jpg
+0 Years3 Months,Male,['Mixed Breed (Medium)'],dog_images/20231129094000.jpg
+4 Years4 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20231127083153.jpg
+2 Years3 Months,Female,"['Terrier, Pit Bull']",dog_images/20231213065551.jpg
+0 Years7 Months,Male,"['Hound ', ' Mix']",dog_images/20240124120046.jpg
+3 Years5 Months,Male,"['Retriever, Labrador']",dog_images/20240117183828.jpg
+0 Years6 Months,Male,"['Terrier, American Pit Bull ', ' Mix']",dog_images/20231110062521.jpg
+5 Years4 Months,Female,"['Terrier, Bull']",dog_images/20231206075914.jpg
+0 Years5 Months,Male,['Mixed Breed (Medium)'],dog_images/20231030082959.jpg
+2 Years3 Months,Female,"['Shepherd, German ', ' Mix']",dog_images/20231102125852.jpg
+9 Years3 Months,Male,"['Dachshund ', ' Chihuahua']",dog_images/20231014174057.jpg
+1 Years0 Months,Male,"['Terrier ', ' Mix']",dog_images/20231014172742.jpg
+4 Years3 Months,Male,"['Terrier, American Staffordshire']",dog_images/20231023080024.jpg
+1 Years6 Months,Male,"['Terrier, Staffordshire Bull']",dog_images/20231018060531.jpg
+0 Years7 Months,Male,"['Shepherd ', ' Mixed Breed (Medium)']",dog_images/20231215085911.jpg
+5 Years3 Months,Female,['Rottweiler'],dog_images/20231103103806.jpg
+6 Years7 Months,Male,"['Terrier, American Pit Bull']",dog_images/20231106160556.jpg
+5 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/Default_Dog.jpg
+3 Years3 Months,Male,['Shih Tzu'],dog_images/20231117114856.jpg
+2 Years3 Months,Female,"['Hound ', ' Mix']",dog_images/20231124082349.jpg
+0 Years3 Months,Male,"['Shepherd, Anatolian ', ' Mix']",dog_images/20231216161854.jpg
+1 Years3 Months,Male,"['Terrier, American Pit Bull']",dog_images/20231106082823.jpg
+3 Years2 Months,Female,"['Terrier, American Pit Bull']",dog_images/20231101163220.jpg
+2 Years4 Months,Male,"['Shepherd, Anatolian ', ' Mix']",dog_images/20231207101248.jpg
+2 Years6 Months,Male,['Mixed Breed (Medium)'],dog_images/20231122101113.jpg
+0 Years9 Months,Male,"['Terrier, Bull ', ' Mix']",dog_images/20231110145257.jpg
+3 Years2 Months,Female,['Mixed Breed (Medium)'],dog_images/20240120200112.jpg
+1 Years0 Months,Female,['Mixed Breed (Medium)'],dog_images/20240120150329.jpg
+0 Years3 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20240108085925.jpg
+0 Years11 Months,Male,['Mixed Breed (Medium)'],dog_images/20231105190028_0.jpg
+2 Years7 Months,Male,['Shepherd'],dog_images/20231215063034.jpg
+1 Years2 Months,Male,"['Mixed Breed (Medium) ', ' Retriever, Labrador']",dog_images/20240112100552.jpg
+3 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20231126055240.jpg
+1 Years2 Months,Male,"['Terrier ', ' Chihuahua, Short Coat']",dog_images/20231221091246.jpg
+2 Years2 Months,Female,"['Terrier, Pit Bull']",dog_images/20231203174423.jpg
+1 Years0 Months,Female,['Shepherd'],dog_images/20231201080829.jpg
+0 Years2 Months,Female,['Mixed Breed (Medium)'],dog_images/20240115093039.jpg
+2 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20231129084914.jpg
+2 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20231115115037.jpg
+2 Years9 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240122121203.jpg
+2 Years5 Months,Female,"['Cattle Dog ', ' Mixed Breed (Medium)']",dog_images/20231221081741.jpg
+2 Years7 Months,Female,['Mixed Breed (Medium)'],dog_images/20231120112409.jpg
+1 Years10 Months,Male,['Black Mouth Cur'],dog_images/20240108053048.jpg
+4 Years2 Months,Male,"['Shepherd, Australian']",dog_images/20231120125548.jpg
+0 Years7 Months,Male,"['Husky ', ' Mix']",dog_images/20240109134707.jpg
+1 Years9 Months,Female,"['Retriever, Yellow Labrador ', ' Terrier, Pit Bull']",dog_images/20240104085500.jpg
+0 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240128071215.jpg
+0 Years11 Months,Female,['Boxer'],dog_images/20231229083947.jpg
+0 Years11 Months,Male,['Boxer'],dog_images/20231229083452.jpg
+0 Years3 Months,Male,['Mixed Breed (Medium)'],dog_images/20240108091724.jpg
+0 Years3 Months,Male,['Mixed Breed (Medium)'],dog_images/20240124081954.jpg
+0 Years3 Months,Male,['Mixed Breed (Medium)'],dog_images/20240124080652.jpg
+4 Years3 Months,Male,"['Shepherd, Australian ', ' Corgi, Pembroke Welsh']",dog_images/20240107190944.jpg
+2 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240112065604.jpg
+0 Years1 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20240101142000.jpg
+2 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/20231229204552.jpg
+2 Years1 Months,Male,"['Retriever, Black Labrador']",dog_images/20231204151254.jpg
+0 Years7 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20240101161719.jpg
+0 Years4 Months,Male,"['Shepherd ', ' Mixed Breed (Medium)']",dog_images/20240119074546.jpg
+0 Years7 Months,Male,"['Terrier, Pit Bull']",dog_images/20240108183413.jpg
+0 Years8 Months,Male,"['American Blue Heeler ', ' Mixed Breed (Medium)']",dog_images/20231205114002.jpg
+1 Years3 Months,Female,"['Hound ', ' Husky']",dog_images/20231230034857.jpg
+6 Years1 Months,Female,"['Boxer ', ' Mixed Breed (Medium)']",dog_images/20240126094847.jpg
+2 Years1 Months,Male,"['Bulldog, American']",dog_images/20231218095841.jpg
+0 Years2 Months,Female,"['Rottweiler ', ' Hound']",dog_images/20231215141902.jpg
+0 Years2 Months,Male,"['Rottweiler ', ' Hound']",dog_images/20231215141757.jpg
+0 Years2 Months,Female,"['Rottweiler ', ' Hound']",dog_images/20231215140244.jpg
+0 Years2 Months,Female,"['Rottweiler ', ' Hound']",dog_images/20231215140147.jpg
+0 Years2 Months,Female,"['Rottweiler ', ' Hound']",dog_images/20231215140032.jpg
+1 Years1 Months,Female,"['Terrier, American Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20240104113333.jpg
+0 Years3 Months,Male,"['Terrier, American Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20240105081410.jpg
+0 Years3 Months,Male,"['Terrier, American Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20231229104734.jpg
+0 Years3 Months,Male,"['Terrier, American Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20240101144107.jpg
+0 Years3 Months,Male,"['Terrier, American Pit Bull ', ' Mixed Breed (Medium)']",dog_images/20240124151837.jpg
+0 Years7 Months,Female,['Pointer'],dog_images/20240103192441.jpg
+1 Years1 Months,Female,"['Bulldog, French ', ' Terrier, Boston']",dog_images/20240114093912.jpg
+6 Years7 Months,Male,"['Terrier ', ' Mixed Breed (Medium)']",dog_images/20231216191417.jpg
+2 Years2 Months,Female,"['Shepherd ', ' Mixed Breed (Medium)']",dog_images/20231207133059.jpg
+5 Years7 Months,Female,"['Collie, Border ', ' Mix']",dog_images/20230511101340.jpg
+8 Years1 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240106094327.jpg
+2 Years5 Months,Male,['Mixed Breed (Medium)'],dog_images/20240117075945.jpg
+2 Years5 Months,Male,"['Mixed Breed (Medium) ', ' Mix']",dog_images/20240104082500.jpg
+9 Years1 Months,Female,['Chihuahua'],dog_images/20240128074417.jpg
+5 Years1 Months,Female,"['Terrier, Parson Jack Russell ', ' Mixed Breed (Medium)']",dog_images/20240112154723.jpg
+1 Years5 Months,Male,['Mixed Breed (Medium)'],dog_images/20240111020904.jpg
+0 Years10 Months,Female,"['Shepherd, German']",dog_images/20240121154101.jpg
+0 Years2 Months,Female,"['Terrier ', ' Mixed Breed (Medium)']",dog_images/20240105111727.jpg
+0 Years2 Months,Female,"['Terrier ', ' Mixed Breed (Medium)']",dog_images/20240105112505.jpg
+1 Years2 Months,Female,"['Catahoula Leopard Dog ', ' Mix']",dog_images/20240121071918.jpg
+0 Years3 Months,Male,"['Terrier, Pit Bull']",dog_images/20240104110253.jpg
+2 Years11 Months,Male,"['Shepherd ', ' Mix']",dog_images/20240121071729.jpg
+3 Years8 Months,Male,"['Vizsla ', ' Mix']",dog_images/20240102130833.jpg
+3 Years2 Months,Male,"['Mixed Breed (Medium) ', ' Dachshund']",dog_images/20240115151909.jpg
+2 Years0 Months,Female,"['Cattle Dog, Australian (Red Heeler) ', ' Terrier, Pit Bull']",dog_images/20240122090328.jpg
+0 Years2 Months,Male,"['Cattle Dog, Australian (Red Heeler) ', ' Mix']",dog_images/20240110093657.jpg
+0 Years2 Months,Female,"['Cattle Dog ', ' Mix']",dog_images/20240104105917.jpg
+0 Years2 Months,Female,"['Cattle Dog, Australian (Red Heeler) ', ' Mix']",dog_images/20240121153222.jpg
+0 Years2 Months,Female,"['Cattle Dog ', ' Mix']",dog_images/20240104104022.jpg
+0 Years2 Months,Female,"['Cattle Dog, Australian (Blue Heeler) ', ' Mix']",dog_images/20240107154551.jpg
+0 Years1 Months,Male,['Mixed Breed (Medium)'],dog_images/20240119102246.jpg
+0 Years1 Months,Male,['Mixed Breed (Medium)'],dog_images/20240119101506.jpg
+4 Years1 Months,Male,['Mastiff'],dog_images/20231222084430.jpg
+0 Years10 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240121111133.jpg
+6 Years1 Months,Female,"['Retriever, Labrador ', ' Mixed Breed (Medium)']",dog_images/20240111104429.jpg
+1 Years0 Months,Male,['Mixed Breed (Medium)'],dog_images/20240120060256.jpg
+2 Years5 Months,Female,"['Boxer ', ' Mixed Breed (Medium)']",dog_images/20240128081732.jpg
+2 Years0 Months,Male,"['Shepherd, German ', ' Mix']",dog_images/20240116121212.jpg
+1 Years0 Months,Female,"['Boxer ', ' Terrier, Pit Bull']",dog_images/20240109090246.jpg
+2 Years3 Months,Male,"['Cattle Dog ', ' Mix']",dog_images/20240112100057.jpg
+2 Years0 Months,Male,"['Retriever, Labrador ', ' Mixed Breed (Large)']",dog_images/20240113151413.jpg
+1 Years0 Months,Female,"['Shepherd, German ', ' Mix']",dog_images/20240110090229.jpg
+1 Years0 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240109130314.jpg
+0 Years3 Months,Female,"['Terrier, Pit Bull']",dog_images/20240109084814.jpg
+0 Years10 Months,Female,"['Shepherd, German']",dog_images/20240121112347.jpg
+0 Years5 Months,Male,"['Cattle Dog ', ' Mix']",dog_images/20240115133530.jpg
+0 Years8 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240117082957.jpg
+0 Years2 Months,Male,['Mixed Breed (Medium)'],dog_images/20240116134301.jpg
+0 Years2 Months,Female,['Shepherd'],dog_images/20240115075900.jpg
+0 Years2 Months,Female,['Terrier'],dog_images/20240122115209.jpg
+0 Years2 Months,Male,['Terrier'],dog_images/20240122115256.jpg
+1 Years7 Months,Male,"['Retriever, Labrador ', ' Chinese Shar-Pei']",dog_images/20240111131639.jpg
+0 Years2 Months,Female,"['Shepherd, German']",dog_images/20240116135430.jpg
+3 Years3 Months,Female,"['Shepherd ', ' Mix']",dog_images/20231230093626.jpg
+5 Years0 Months,Female,['Cattle Dog'],dog_images/20240112101503.jpg
+4 Years0 Months,Female,"['Spaniel, English Springer ', ' Mix']",dog_images/20240111162416.jpg
+0 Years2 Months,Female,"['Spaniel, English Springer ', ' Mix']",dog_images/20240125145648.jpg
+4 Years0 Months,Female,"['Hound ', ' Bulldog, American']",dog_images/20240117074625.jpg
+0 Years2 Months,Unknown,"['Corgi, Pembroke Welsh ', ' Chihuahua']",dog_images/20240110124121.jpg
+0 Years2 Months,Male,"['Corgi, Pembroke Welsh ', ' Chihuahua']",dog_images/20240110124457.jpg
+0 Years2 Months,Unknown,"['Corgi, Pembroke Welsh ', ' Chihuahua']",dog_images/20240124094652.jpg
+0 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240115085212.jpg
+0 Years4 Months,Male,"['Schnauzer, Standard ', ' Mix']",dog_images/20240117073144.jpg
+1 Years0 Months,Female,"['Terrier ', ' Mix']",dog_images/20240111144156.jpg
+0 Years6 Months,Female,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240124101741.jpg
+10 Years0 Months,Male,"['Terrier, Boston']",dog_images/20240119115932.jpg
+0 Years1 Months,Female,"['Retriever, Labrador ', ' Terrier, Pit Bull']",dog_images/20240118192938.jpg
+0 Years5 Months,Female,"['Shepherd, Anatolian ', ' Pyrenees, Great']",dog_images/20240128082337.jpg
+3 Years0 Months,Male,"['Terrier ', ' Mix']",dog_images/20240122080344.jpg
+3 Years0 Months,Male,"['Shepherd, German']",dog_images/20240123090809.jpg
+6 Years0 Months,Male,"['Terrier, Pit Bull']",dog_images/20240124100426.jpg
+1 Years3 Months,Female,['Shepherd'],dog_images/20240128082955.jpg
+0 Years3 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240119115244.jpg
+5 Years0 Months,Male,['Beagle'],dog_images/20240115114335.jpg
+2 Years0 Months,Male,"['Shepherd, German']",dog_images/20240123090420.jpg
+0 Years2 Months,Female,"['Retriever, Labrador ', ' Mix']",dog_images/20240122213326.jpg
+0 Years2 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20240122131710.jpg
+0 Years3 Months,Female,"['Retriever, Black Labrador ', ' Mix']",dog_images/20240123093928.jpg
+0 Years5 Months,Male,"['Cattle Dog, Australian (Blue Heeler) ', ' Mix']",dog_images/20240122113420.jpg
+0 Years2 Months,Male,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/Default_Dog.jpg
+0 Years2 Months,Female,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/Default_Dog.jpg
+0 Years2 Months,Female,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/Default_Dog.jpg
+0 Years2 Months,Female,"['Cattle Dog, Australian (Blue Heeler)']",dog_images/Default_Dog.jpg
+0 Years2 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240118143103.jpg
+0 Years2 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240118134213.jpg
+0 Years2 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240126100522.jpg
+0 Years2 Months,Male,"['Shepherd ', ' Mix']",dog_images/20240125144229.jpg
+0 Years2 Months,Male,"['Shepherd ', ' Mix']",dog_images/20240118144254.jpg
+0 Years2 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240118143545.jpg
+0 Years2 Months,Female,"['Shepherd, German ', ' Mixed Breed (Large)']",dog_images/20240122212823.jpg
+0 Years2 Months,Female,"['Shepherd, German ', ' Mixed Breed (Large)']",dog_images/20240122210343.jpg
+3 Years1 Months,Male,"['Retriever, Labrador ', ' Mix']",dog_images/20231225124932.jpg
+2 Years1 Months,Male,"['Shepherd ', ' Mix']",dog_images/20231228113601.jpg
+4 Years0 Months,Male,"['Terrier, Pit Bull']",dog_images/20240123122143.jpg
+1 Years7 Months,Female,"['Retriever, Chocolate Labrador ', ' Mix']",dog_images/20240123081444.jpg
+3 Years1 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240121030732.jpg
+1 Years3 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240108121715.jpg
+3 Years2 Months,Female,"['Retriever, Labrador ', ' Mixed Breed (Large)']",dog_images/20240104164254.jpg
+2 Years0 Months,Male,['Cattle Dog'],dog_images/20240110101023.jpg
+2 Years2 Months,Female,"['Terrier ', ' Mix']",dog_images/20240103075839.jpg
+2 Years2 Months,Female,"['Retriever, Labrador ', ' Mixed Breed (Large)']",dog_images/20231217190917.jpg
+1 Years1 Months,Female,"['Retriever, Labrador ', ' Shepherd']",dog_images/20231221144815.jpg
+2 Years0 Months,Female,"['Bulldog, American ', ' Mix']",dog_images/20240119075239.jpg
+1 Years2 Months,Male,"['Chihuahua, Short Coat']",dog_images/20240122113028.jpg
+1 Years2 Months,Male,"['Chihuahua, Long Coat']",dog_images/20240124073245.jpg
+0 Years10 Months,Male,"['Boxer ', ' Mix']",dog_images/20240124102609.jpg
+0 Years10 Months,Female,"['Boxer ', ' Mix']",dog_images/20231229130734.jpg
+2 Years0 Months,Female,"['Shepherd ', ' Mix']",dog_images/20240126095226.jpg
+1 Years1 Months,Male,"['Terrier, Pit Bull ', ' Mix']",dog_images/20240124084526.jpg
+0 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/20240125121413.jpg
+0 Years4 Months,Female,['Mixed Breed (Medium)'],dog_images/20240125121443.jpg
+1 Years3 Months,Male,['Shepherd'],dog_images/20240124084929.jpg
+0 Years8 Months,Male,"['Shepherd ', ' Mix']",dog_images/20240125144926.jpg
+1 Years3 Months,Female,['Shepherd'],dog_images/20231228142341_0.jpg
