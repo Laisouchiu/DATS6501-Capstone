@@ -90,6 +90,25 @@ outcomes1['Animal Type'].value_counts()
 
 #%%
 
+## Sex upon Outcome manipulation
+
+outcomes1['Sex upon Outcome'].value_counts()
+
+# First we want remove the 'Unknown', 
+# only 8% of total datasets, which is meanlingless to our analysis
+##(outcomes1['Sex upon Outcome'] == 'Unknown').sum()
+outcomes1 = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
+outcomes1['Sex upon Outcome'].value_counts()
+
+#%%
+# Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
+outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
+outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
+outcomes1.info()
+
+# Categorize 'Neutered' and 'Spayed' these 2 values both into one value 'Neutered/Spayed' ? 
+# then the whole feature just has 2 values: Neutered/Spayed, Intact ?
+
 # %%
 
 ## Outcome Type manipulation (Roadblock): 
