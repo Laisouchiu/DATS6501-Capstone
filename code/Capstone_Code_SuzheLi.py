@@ -74,9 +74,25 @@ unique_check1 = ['Outcome Type', 'Animal Type', 'Sex upon Outcome', 'Breed', 'Co
 for feature in unique_check1:
     print(f" '{feature}' feature has {outcomes1[feature].nunique()} unique values.")
 
+
+#%%
+
+## Animal Type manipulation
+
+outcomes1['Animal Type'].value_counts()
+
+# Because most of the Animals are just Dog and Cat,
+# we want to categorize 'Bird' and 'Livestock' into 'Other' category too
+outcomes1['Animal Type'] = outcomes1['Animal Type'].replace({'Bird': 'Other', 
+                                                             'Livestock': 'Other'})
+outcomes1['Animal Type'].value_counts()
+
+
+#%%
+
 # %%
 
-## Outcome Type manipulation: 
+## Outcome Type manipulation (Roadblock): 
 
 # Outcome Type feature has 11 unique values, 
 # which is more than our first though
