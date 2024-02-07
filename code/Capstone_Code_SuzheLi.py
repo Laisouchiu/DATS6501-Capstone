@@ -100,7 +100,6 @@ outcomes1['Sex upon Outcome'].value_counts()
 outcomes1 = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
 outcomes1['Sex upon Outcome'].value_counts()
 
-#%%
 # Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
 outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
 outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
@@ -109,9 +108,19 @@ outcomes1.info()
 # Categorize 'Neutered' and 'Spayed' these 2 values both into one value 'Neutered/Spayed' ? 
 # then the whole feature just has 2 values: Neutered/Spayed, Intact ?
 
+## outcomes1['Neuter Status'] = outcomes1['Neuter Status'].str.contains('Neutered|Spayed').replace({True: 'Neutered/Spayed', False: 'Intact'})
+
+#%%
+# Reorder the sequence of all features 
+
+
 # %%
 
-## Outcome Type manipulation (Roadblock): 
+# Roadblock1: How to manipulate so many categories for 'Breed' feature  
+# Roadblock2: How to manipulate so many categoires for 'Color' feature
+
+#%%
+## Outcome Type manipulation (Roadblock3): 
 
 # Outcome Type feature has 11 unique values, 
 # which is more than our first though
