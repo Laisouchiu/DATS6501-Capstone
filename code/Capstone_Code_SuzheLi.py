@@ -101,6 +101,7 @@ outcomes1 = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
 outcomes1['Sex upon Outcome'].value_counts()
 
 # Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
+# and also drop the original "Sex upon Outcome" column
 outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
 outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
 outcomes1.info()
@@ -111,7 +112,22 @@ outcomes1.info()
 ## outcomes1['Neuter Status'] = outcomes1['Neuter Status'].str.contains('Neutered|Spayed').replace({True: 'Neutered/Spayed', False: 'Intact'})
 
 #%%
-# Reorder the sequence of all features 
+## Transform the Datetime feature
+
+# Drop the 'Outcome DateTime' column (Duplicate info with 'Outcome MonthYear')
+outcomes1 = outcomes1.drop(['Outcome DateTime'], axis=1)
+
+# Then we want to separate the month and year information
+outcomes1[['Outcome Month', 'Outcome Year']] = outcomes1['Outcome MonthYear'].str.split(' ', 1, expand=True)
+outcomes1 = outcomes1.drop(['Outcome MonthYear'], axis=1)
+
+outcomes1.info()
+
+
+#%%
+
+## Transform the 'Age' numerical feature:
+
 
 
 # %%
