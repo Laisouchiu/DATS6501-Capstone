@@ -127,6 +127,42 @@ outcomes1.info()
 #%%
 
 ## Transform the 'Age' numerical feature:
+# Because the majority animals here are Dogs/Cats. 
+# For larger mammals like dogs or cats, years are typically used, as their lifespans are longer.
+
+# Check how many types of time units for the Age feature
+outcomes1[['Age Number', 'Age Unit']] = outcomes1['Age upon Outcome'].str.split(' ', 1, expand=True)
+# outcomes1.info()
+
+print(f"Animal age feature has {outcomes1['Age Unit'].nunique()} unique values, which are:")
+outcomes1['Age Unit'].value_counts()
+
+# We need to confirm that those single time units like 'year' and 'week' are surely equal to 1. 
+single_units = ['year', 'month', 'week', 'day']
+for unit in single_units:
+    test_df = outcomes1[outcomes1['Age Unit'] == unit] 
+    number = test_df['Age Number'].unique()
+    print(f"Animal Age feature with '{unit}' unit has {test_df['Age Number'].nunique()} unique values, which is equal to {number[0]}")
+    # test_df.head()
+
+
+#%%
+# Create a function to convert Age units all into Year(s) and apply it.
+def age_in_years(age):
+    if 'year' in age or 'years' in age:
+        return float(age.split()[0])
+    elif 'month' in age or 'months' in age:
+        return float(age.split()[0]) / 12
+    elif 'week' in age or 'weeks' in age:
+        return float(age.split()[0]) / 52 
+    elif 'day' in age or 'days' in age:
+        return float(age.split()[0]) / 365 
+    else:
+        return None
+
+outcomes1['Age upon Outcome (Year)'] = outcomes1['Age upon Outcome'].apply(age_in_years)
+
+
 
 
 
