@@ -183,3 +183,14 @@ outcomes1['Outcome Type'].value_counts()
 ## Based on the check, we can of course first erased some meaningless values:
 
 # %%
+in_and_out3.info()
+# %%
+
+
+#%%
+
+## Example modeling code
+# animal type, sex, and neutered/spayed features can be encoded as 1 or 0 directly
+# for breed and color features, like the conversion project from机构, 对它进行nlp的预处理 by unigarm and bigram, 每种不同颜色是一个vector (1 or 0), 然后再encoded?
+
+
