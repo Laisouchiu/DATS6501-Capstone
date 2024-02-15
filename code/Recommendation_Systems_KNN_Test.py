@@ -4,6 +4,9 @@ import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 
+
+
+#%%
 # Create a simple example dataset with numerical 'Age upon Outcome'
 data = {
     'Animal Name': ['Buddy', 'Kitty', 'Max', 'Luna', 'Rocky'],  # Animal names
@@ -16,9 +19,10 @@ data = {
 }
 
 # Assume the datasets have been cleaned
-
 df = pd.DataFrame(data)
 df1 = df.copy() # copy the dataset 
+
+
 
 #%%
 # Drop the 'Animal Name' column temporarily before encoding
@@ -35,6 +39,8 @@ df_encoded[['Age upon Outcome']] = scaler.fit_transform(df_encoded[['Age upon Ou
 k = 3  # Number of neighbors to consider
 knn_model = NearestNeighbors(n_neighbors=k)
 knn_model.fit(df_encoded)
+
+
 
 #%%
 # Function to recommend animals based on user preferences
@@ -64,6 +70,8 @@ def recommend_animals(user_preferences, knn_model, animal_data):
     recommended_animals = animal_data.iloc[indices[0]]
     
     return recommended_animals
+
+
 
 #%%
 # Example user preferences
@@ -114,3 +122,48 @@ for name in recommended_animals_df['Animal Name']:
 
 
 
+#%%
+## Revised Code (Considering the unseen features situation) 
+
+def recommend_animals(user_preferences, knn_model, animal_data, scaler):
+    # Convert user preferences to DataFrame
+    user_prefs_df = pd.DataFrame([user_preferences])
+    
+    # Encode user preferences using one-hot encoding
+    # Ensure it matches the training data's structure
+    user_prefs_encoded = pd.get_dummies(user_prefs_df)
+    missing_cols = set(animal_data.columns) - set(user_prefs_encoded.columns)
+    for c in missing_cols:
+        user_prefs_encoded[c] = 0
+    user_prefs_encoded = user_prefs_encoded[animal_data.columns]
+    
+    # Standardize numerical features for user preferences
+    if 'Age upon Outcome' in user_preferences:
+        user_prefs_encoded[['Age upon Outcome']] = scaler.transform(user_prefs_encoded[['Age upon Outcome']])
+    
+    # Find k nearest neighbors
+    distances, indices = knn_model.kneighbors(user_prefs_encoded)
+    
+    # Retrieve recommended animals
+    recommended_indices = indices[0]
+    recommended_animals = df1.iloc[recommended_indices]
+    
+    return recommended_animals
+
+# Usage:
+user_preferences = {
+    'Animal Type': 'Dog',
+    'Age upon Outcome': 4,
+    'Breed': 'Labrador Retriever',
+    'Color': 'Pink',  # Assuming 'Blue' is an unseen category, where didn't appear in original datasets
+    'Neutered/Spayed Status': 'Neutered',
+    'Sex': 'Male'
+}
+
+# Get recommended animals based on user preferences
+recommended_animals_df = recommend_animals(user_preferences, knn_model, df_encoded, scaler)
+
+# Display the recommendations
+print("Recommended animals:")
+print(recommended_animals_df)
+# %%
