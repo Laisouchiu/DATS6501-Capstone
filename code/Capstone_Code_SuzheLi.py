@@ -50,13 +50,27 @@ df = aac_in_out[new_column_order]
 df.info()
 df.head(10)
 
-
+#%%
+datetime_columns = ['Income_Datetime', 'Outcome_Datetime']
+for column in datetime_columns:
+    df[column] = pd.to_datetime(df[column], 
+                                format='%m/%d/%Y %I:%M:%S %p'
+                                )
+df.info()
+df.head(10)
 
 #%%
-#df1 = df[df['Outcome_MonthYear'] != df['Income_MonthYear']]
+wrong = df[df['Outcome_Datetime'] <= df['Income_Datetime']]
+wrong.info()
 
 #%%
-aac_in_out.isnull().sum()
+# We got some portion of wrong datetime where the income datetime is later than the outcome datetime, 
+# which is not reasonable, so we need to subset them out
+df1 = df[df['Outcome_Datetime'] > df['Income_Datetime']]
+df1.info()
+
+#%%
+df1.isnull().sum()
 
 
 
