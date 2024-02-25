@@ -23,6 +23,45 @@ aac_in_out = pd.merge(aac_intakes, aac_outcomes, on='Animal ID', how='inner')
 aac_in_out.info()
 
 
+#%%
+columns_dropped = ['Animal ID', 'Outcome Subtype', # Useless features for our analysis 
+                   'Name_y', 'Animal Type_y', 'Breed_y', 'Color_y', # Duplicated features after merged joining
+                   'MonthYear_x', 'MonthYear_y'] # Duplicate information with Datetime 
+aac_in_out = aac_in_out.drop(columns_dropped, axis=1)
+aac_in_out.info()
+
+#%%
+aac_in_out.rename(columns={'Name_x' : 'Name', 'Animal Type_x': 'Type', 
+                           'Breed_x':'Breed', 'Color_x':'Color', 
+                           'DateTime_x':'Income_Datetime', 'DateTime_y':'Outcome_Datetime',  
+                           'MonthYear_x':'Income_MonthYear', 'MonthYear_y':'Outcome_MonthYear'}, 
+                  inplace=True)
+aac_in_out.info()
+
+#%%
+new_column_order = [
+    'Name', 'Type', 'Breed', 'Color', 'Date of Birth', 'Age upon Intake',
+    'Income_Datetime', 'Found Location', 'Intake Condition', 'Intake Type', 'Sex upon Intake',
+    'Outcome_Datetime', 'Sex upon Outcome', 'Age upon Outcome', 'Outcome Type'
+]
+
+# Reorder the DataFrame columns
+df = aac_in_out[new_column_order]
+df.info()
+df.head(10)
+
+
+
+#%%
+#df1 = df[df['Outcome_MonthYear'] != df['Income_MonthYear']]
+
+#%%
+aac_in_out.isnull().sum()
+
+
+
+
+
 
 #%%
 # Shelter Datasets from Long Beach (For Los Angeles Area, South California)
