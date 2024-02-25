@@ -17,6 +17,13 @@ aac_outcomes = pd.read_csv('AAC_Outcomes.csv')
 aac_outcomes.info()
 aac_outcomes.head()
 
+
+#%%
+aac_in_out = pd.merge(aac_intakes, aac_outcomes, on='Animal ID', how='inner')
+aac_in_out.info()
+
+
+
 #%%
 # Shelter Datasets from Long Beach (For Los Angeles Area, South California)
 in_and_out2 = pd.read_csv('LongBeach_Intakes_Outcomes.csv')
@@ -37,6 +44,15 @@ in_and_out2.columns
 #%%
 in_and_out3.columns
 
+#%%
+aac_outcomes.info()
+# Date of birth as income? 
+
+
+#%%
+aac_intakes.info()
+
+#%%
 
 #%%
 
