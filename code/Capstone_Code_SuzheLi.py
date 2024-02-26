@@ -21,7 +21,7 @@ aac_outcomes.head()
 #%%
 aac_in_out = pd.merge(aac_intakes, aac_outcomes, on='Animal ID', how='inner')
 aac_in_out.info()
-
+#%%
 
 #%%
 columns_dropped = ['Animal ID', 'Outcome Subtype', # Useless features for our analysis 
@@ -105,6 +105,13 @@ df_clean.isnull().sum()
 df_clean = df_clean[df_clean['Outcome Type'].notnull()]
 df_clean.isnull().sum()
 # Now we can see the dataset is clean
+
+#%%
+# Remove duplicate rows
+df_unique = df_clean.drop_duplicates(keep=False)
+df_unique.info()
+
+
 
 #%%
 df_clean['Outcome Type'].value_counts()
