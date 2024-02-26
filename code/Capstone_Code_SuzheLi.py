@@ -97,10 +97,85 @@ df_clean.info()
 
 #%%
 df_clean.isnull().sum()
-# After cleaning and subsets, now we only have Name and Outcome Type column have null values.
-# For null values from animal's Name and Outcome Type, we just leave it for now because it won't affect our analysis
-# For Name, it's just for better identification to know which specific animal needs more care
 
+#%%
+# After cleaning and subsets, now we only have Name and Outcome Type column have null values.
+# For Name, it's just for better identification to know which specific animal needs more care, which won't affect our analysis, so we just leave these nulls
+# For Outcome Type, because we only have 36 null among 171335 observations, and it doesn't help our analysis at all, so we subset them out too.
+df_clean = df_clean[df_clean['Outcome Type'].notnull()]
+df_clean.isnull().sum()
+# Now we can see the dataset is clean
+
+#%%
+df_clean['Outcome Type'].value_counts()
+
+
+#%%
+## Transform the 'Age' numerical feature:
+# Because the majority animals here are Dogs/Cats. 
+# For larger mammals like dogs or cats, years are typically used, as their lifespans are longer.
+
+# Check how many types of time units for the Age feature
+df_clean[['Age Number', 'Age Unit']] = df_clean['Age upon Outcome'].str.split(' ', 1, expand=True)
+# outcomes1.info()
+
+print(f"Animal age feature has {df_clean['Age Unit'].nunique()} unique values, which are:")
+df_clean['Age Unit'].value_counts()
+
+#%%
+# We need to confirm that those single time units like 'year' and 'week' are surely equal to 1. 
+single_units = ['year', 'month', 'week', 'day']
+for unit in single_units:
+    test_df = df_clean[df_clean['Age Unit'] == unit] 
+    number = test_df['Age Number'].unique()
+    print(f"Animal Age feature with '{unit}' unit has {test_df['Age Number'].nunique()} unique values, which is equal to {number[0]}")
+    # test_df.head()
+
+
+#%%
+# Create a function to convert Age units all into Year(s) and apply it.
+def age_in_years(age):
+    if 'year' in age or 'years' in age:
+        return float(age.split()[0])
+    elif 'month' in age or 'months' in age:
+        return float(age.split()[0]) / 12
+    elif 'week' in age or 'weeks' in age:
+        return float(age.split()[0]) / 52 
+    elif 'day' in age or 'days' in age:
+        return float(age.split()[0]) / 365 
+    else:
+        return None
+
+df_clean['Age upon Outcome (Year)'] = df_clean['Age upon Outcome'].apply(age_in_years)
+df_clean['Age upon Intake (Year)'] = df_clean['Age upon Intake'].apply(age_in_years)
+
+df_clean = df_clean.drop(columns=['Age upon Intake', 'Age upon Outcome', 'Age Unit', 'Age Number'], axis=1)
+df_clean.info()
+
+
+
+#%%
+
+## Sex upon Outcome manipulation
+
+df_clean['Sex upon Outcome'].value_counts()
+
+# First we want remove the 'Unknown', 
+# only 8% of total datasets, which is meanlingless to our analysis
+##(outcomes1['Sex upon Outcome'] == 'Unknown').sum()
+df_clean = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
+outcomes1['Sex upon Outcome'].value_counts()
+
+# Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
+# and also drop the original "Sex upon Outcome" column
+outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
+outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
+outcomes1.info()
+
+# Categorize 'Neutered' and 'Spayed' these 2 values both into one value 'Neutered/Spayed' ? 
+# then the whole feature just has 2 values: Neutered/Spayed, Intact ?
+
+## outcomes1['Neuter Status'] = outcomes1['Neuter Status'].str.contains('Neutered|Spayed').replace({True: 'Neutered/Spayed', False: 'Intact'})
 
 
 
@@ -185,28 +260,6 @@ outcomes1['Animal Type'] = outcomes1['Animal Type'].replace({'Bird': 'Other',
 outcomes1['Animal Type'].value_counts()
 
 
-#%%
-
-## Sex upon Outcome manipulation
-
-outcomes1['Sex upon Outcome'].value_counts()
-
-# First we want remove the 'Unknown', 
-# only 8% of total datasets, which is meanlingless to our analysis
-##(outcomes1['Sex upon Outcome'] == 'Unknown').sum()
-outcomes1 = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
-outcomes1['Sex upon Outcome'].value_counts()
-
-# Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
-# and also drop the original "Sex upon Outcome" column
-outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
-outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
-outcomes1.info()
-
-# Categorize 'Neutered' and 'Spayed' these 2 values both into one value 'Neutered/Spayed' ? 
-# then the whole feature just has 2 values: Neutered/Spayed, Intact ?
-
-## outcomes1['Neuter Status'] = outcomes1['Neuter Status'].str.contains('Neutered|Spayed').replace({True: 'Neutered/Spayed', False: 'Intact'})
 
 #%%
 ## Transform the Datetime feature
@@ -219,45 +272,6 @@ outcomes1[['Outcome Month', 'Outcome Year']] = outcomes1['Outcome MonthYear'].st
 outcomes1 = outcomes1.drop(['Outcome MonthYear'], axis=1)
 
 outcomes1.info()
-
-
-#%%
-
-## Transform the 'Age' numerical feature:
-# Because the majority animals here are Dogs/Cats. 
-# For larger mammals like dogs or cats, years are typically used, as their lifespans are longer.
-
-# Check how many types of time units for the Age feature
-outcomes1[['Age Number', 'Age Unit']] = outcomes1['Age upon Outcome'].str.split(' ', 1, expand=True)
-# outcomes1.info()
-
-print(f"Animal age feature has {outcomes1['Age Unit'].nunique()} unique values, which are:")
-outcomes1['Age Unit'].value_counts()
-
-# We need to confirm that those single time units like 'year' and 'week' are surely equal to 1. 
-single_units = ['year', 'month', 'week', 'day']
-for unit in single_units:
-    test_df = outcomes1[outcomes1['Age Unit'] == unit] 
-    number = test_df['Age Number'].unique()
-    print(f"Animal Age feature with '{unit}' unit has {test_df['Age Number'].nunique()} unique values, which is equal to {number[0]}")
-    # test_df.head()
-
-
-#%%
-# Create a function to convert Age units all into Year(s) and apply it.
-def age_in_years(age):
-    if 'year' in age or 'years' in age:
-        return float(age.split()[0])
-    elif 'month' in age or 'months' in age:
-        return float(age.split()[0]) / 12
-    elif 'week' in age or 'weeks' in age:
-        return float(age.split()[0]) / 52 
-    elif 'day' in age or 'days' in age:
-        return float(age.split()[0]) / 365 
-    else:
-        return None
-
-outcomes1['Age upon Outcome (Year)'] = outcomes1['Age upon Outcome'].apply(age_in_years)
 
 
 
