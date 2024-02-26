@@ -72,6 +72,34 @@ df1.info()
 #%%
 df1.isnull().sum()
 
+#%%
+sex_nulls = df1[df1['Sex upon Outcome'].isnull()]
+sex_nulls
+# We can see the null values from sex upon intakes also null in sex upon outcome
+# so we can just subset out these null values
+
+#%% 
+df_clean = df1[df1['Sex upon Outcome'].notnull()]
+df_clean.isnull().sum()
+#df_clean.info()
+
+#%%
+df_clean['Duration in Shelter'] = df_clean['Outcome_Datetime'] - df_clean['Income_Datetime']
+df_clean.info()
+
+
+#%%
+# We subset out the other types of animal but focus on the majority type of shelter animal, dog and cat
+df_clean['Type'].value_counts()
+df_clean = df_clean[(df_clean['Type'] == 'Dog') | (df_clean['Type'] == 'Cat')]
+df_clean.info()
+
+
+#%%
+df_clean.isnull().sum()
+# After cleaning and subsets, now we only have Name and Outcome Type column have null values.
+# For null values from animal's Name and Outcome Type, we just leave it for now because it won't affect our analysis
+# For Name, it's just for better identification to know which specific animal needs more care
 
 
 
