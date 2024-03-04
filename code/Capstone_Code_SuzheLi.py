@@ -159,7 +159,18 @@ df_clean['Age upon Intake (Year)'] = df_clean['Age upon Intake'].apply(age_in_ye
 df_clean = df_clean.drop(columns=['Age upon Intake', 'Age upon Outcome', 'Age Unit', 'Age Number'], axis=1)
 df_clean.info()
 
+#%%
+age_means = df_clean['Age upon Outcome (Year)'].mean()
 
+
+#%%
+euthanized = df_clean[df_clean['Outcome Type'] == 'Euthanasia']
+
+#%%
+euthanized_mean = euthanized['Age upon Outcome (Year)'].mean()
+
+#%%
+duration_mean = euthanized['Duration in Shelter'].mean()
 
 #%%
 
