@@ -172,6 +172,39 @@ euthanized_mean = euthanized['Age upon Outcome (Year)'].mean()
 #%%
 duration_mean = euthanized['Duration in Shelter'].mean()
 
+
+#%%
+# Threshold? : 
+# 1). Generally, an animal is considered to have a long shelter stay 
+#     if it remains unadopted past the average time animals are usually adopted within that facility or community; 
+# 2). Some animals may consider a stay of 2-3 months as long because of their income situation or that shelter is a Short-term shelters, 
+#     and the goal is to find homes for animals as quickly as possible, 
+#     but some Long-term shelters may have a different perspective, 
+#     where animals can stay for years if necessary, making a "long" stay a much more extended period.
+
+
+# Ask: Longest period animal can stay in the shelter
+
+# For now, because we are using the dataset from Austin Animal Center, 
+# which is a big organization, and also this project is for a comprehensive goal for every animal shelters, 
+# so maybe using the Average adopted time as the threshold in my data pipeline would be a nice choice? 
+
+
+# Visualizations?
+# Step 1). Sub-category them, and then print out thir adopted time's distribution and see which category needs more help 
+# Step 2). 
+
+
+# another objective: increasing adopted persons
+# visualize the location, and think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
+# (can visualize in Tableau)
+
+# Modeling? \
+# adopted, find out the duration distribution 
+# try to predict the duration (regression model)
+
+
+
 #%%
 
 ## Sex upon Outcome manipulation
