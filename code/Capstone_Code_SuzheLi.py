@@ -174,6 +174,102 @@ duration_mean = euthanized['Duration in Shelter'].mean()
 
 
 #%%
+# Visualization: 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style='darkgrid')
+
+# Visualizations:
+# Part 1. 
+# --- --- Objective: From animal's perspective, help to 'See which animals needs more help and Reduce animals stayed in the shelters' 
+# --- --- Sub-category them, then print out thir adopted time's distribution
+# --- --- In order to see which category needs more help 
+
+
+# Part.2. 
+# --- --- Objective: From adopter's perspectives, help to 'Increasing adopted persons'
+# --- --- Visualize by location,
+# --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
+
+
+#%%
+# Convert the datetime into total hours 
+df_clean['Duration in Hours'] = df_clean['Duration in Shelter'].dt.total_seconds() / 3600
+df_clean['Duration in Shelter'].head(5)
+
+#%%
+df_clean['Type'].value_counts()
+
+#%%
+df_dogs = df_clean[df_clean['Type'] == 'Dog']
+# df_dogs['Type'].value_counts()
+
+df_cats = df_clean[df_clean['Type'] == 'Cat']
+# df_cats['Type'].value_counts()
+
+#%%
+sns.histplot(df_dogs['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Dogs Adopted Time')
+plt.xlabel('Hour of the Day')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+#%%
+sns.histplot(df_cats['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Cats)')
+plt.xlabel('Hour of the Day')
+plt.ylabel('Frequency')
+plt.grid()
+plt.show()
+
+
+#%%
+# 根据上面的print出来来看，因为如果全部print出来，很多outliers，确实有相当一部分动物
+# 所以根据这点，第一可以先defined一个stay in shelter long的threshold然后筛选出threshold以内的这部分animal进行distribution的查看；
+# 最重要的是找到每种types的animals的most frequency的那部分adopted times
+# 其次那些stay in the shelter long的threshold以外的animals，对比看看那种动物stay in the shelter long的占比更多以及distribution如何？
+
+#%%
+df_dogs1 = df_dogs[df_dogs['Duration in Hours']<1000]
+df_dogs1.info()
+
+#%%
+df_cats1 = df_cats[df_cats['Duration in Hours']<1000]
+df_cats1.info()
+
+#%%
+# Distribution of Dogs within 'Stay Long' threshold
+plt.figure(figsize=(11,8))
+sns.histplot(df_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Dogs)')
+plt.xlabel('Hour of the Day')
+plt.ylabel('Frequency')
+plt.show()
+
+#%%
+# Distribution of Cats within 'Stay Long' threshold
+plt.figure(figsize=(11,8))
+sns.histplot(x='Duration in Hours', data=df_cats1, bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Cats)')
+plt.xlabel('Hour of the Day')
+plt.ylabel('Frequency')
+plt.show()
+
+#%%
+
+
+#%%
+# Modeling? \
+# adopted, find out the duration distribution 
+# try to predict the duration (regression model)
+
+#%%
+
+
+
+#%%
 # Threshold? : 
 # 1). Generally, an animal is considered to have a long shelter stay 
 #     if it remains unadopted past the average time animals are usually adopted within that facility or community; 
@@ -190,169 +286,5 @@ duration_mean = euthanized['Duration in Shelter'].mean()
 # so maybe using the Average adopted time as the threshold in my data pipeline would be a nice choice? 
 
 
-# Visualizations?
-# Step 1). Sub-category them, and then print out thir adopted time's distribution and see which category needs more help 
-# Step 2). 
-
-
-# another objective: increasing adopted persons
-# visualize the location, and think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
-# (can visualize in Tableau)
-
-# Modeling? \
-# adopted, find out the duration distribution 
-# try to predict the duration (regression model)
-
-
-
-#%%
-
-## Sex upon Outcome manipulation
-
-df_clean['Sex upon Outcome'].value_counts()
-
-# First we want remove the 'Unknown', 
-# only 8% of total datasets, which is meanlingless to our analysis
-##(outcomes1['Sex upon Outcome'] == 'Unknown').sum()
-df_clean = outcomes1[outcomes1['Sex upon Outcome'] != 'Unknown']
-outcomes1['Sex upon Outcome'].value_counts()
-
-# Besides, we want to seperated the Neutered/Spayed information out as an another unique new feature column
-# and also drop the original "Sex upon Outcome" column
-outcomes1[['Neutered/Spayed Status', 'Sex']] = outcomes1['Sex upon Outcome'].str.split(' ', 1, expand=True)
-outcomes1 = outcomes1.drop(['Sex upon Outcome'], axis=1)
-outcomes1.info()
-
-# Categorize 'Neutered' and 'Spayed' these 2 values both into one value 'Neutered/Spayed' ? 
-# then the whole feature just has 2 values: Neutered/Spayed, Intact ?
-
-## outcomes1['Neuter Status'] = outcomes1['Neuter Status'].str.contains('Neutered|Spayed').replace({True: 'Neutered/Spayed', False: 'Intact'})
-
-
-
-
-#%%
-# Shelter Datasets from Long Beach (For Los Angeles Area, South California)
-in_and_out2 = pd.read_csv('LongBeach_Intakes_Outcomes.csv')
-in_and_out2.info()
-in_and_out2.head()
-
-#%%
-# Shelter Datasets from Sonoma County (For Bay Area, North California)
-in_and_out3 = pd.read_csv('Soco_Intakes_Outcomes.csv')
-in_and_out3.info()
-in_and_out3.head()
-
-# %%
-
-#%%
-in_and_out2.columns
-
-#%%
-in_and_out3.columns
-
-#%%
-aac_outcomes.info()
-# Date of birth as income? 
-
-
-#%%
-aac_intakes.info()
-
-#%%
-
-#%%
-
-############################### Austin Animal Center Outcomes ######################################
-
-
-# Some EDA Example: https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-outcomes-and/code 
-
-## Features needed to be removed: Animal ID, Name, DateBirth, Outcome Subtype
-## Check unique values' count for these features: Outcome Type, Animal Type, Sex upon Outcome, Breed, Color
-## Features needed manipulations: Outcome Type, Sex Upon Outcome, Age upon Outcome
-
-#%%
-# Basic check
-aac_outcomes.info()
-aac_outcomes.head()
-
-# %%
-# Removing useless features
-remove = ['Animal ID', 'Name', 'Date of Birth', 'Outcome Subtype']
-outcomes1 = aac_outcomes.drop(remove, axis=1)
-outcomes1.info()
-
-# %%
-# Renaming features for better understanding
-new_names = {"DateTime":"Outcome DateTime", "MonthYear":"Outcome MonthYear"}
-outcomes1 = outcomes1.rename(columns=new_names)
-outcomes1.info()
-
-# %%
-# Checking unique values for some features and decide the manipulation methods
-
-unique_check1 = ['Outcome Type', 'Animal Type', 'Sex upon Outcome', 'Breed', 'Color']
-
-for feature in unique_check1:
-    print(f" '{feature}' feature has {outcomes1[feature].nunique()} unique values.")
-
-
-#%%
-
-## Animal Type manipulation
-
-outcomes1['Animal Type'].value_counts()
-
-# Because most of the Animals are just Dog and Cat,
-# we want to categorize 'Bird' and 'Livestock' into 'Other' category too
-outcomes1['Animal Type'] = outcomes1['Animal Type'].replace({'Bird': 'Other', 
-                                                             'Livestock': 'Other'})
-outcomes1['Animal Type'].value_counts()
-
-
-
-#%%
-## Transform the Datetime feature
-
-# Drop the 'Outcome DateTime' column (Duplicate info with 'Outcome MonthYear')
-outcomes1 = outcomes1.drop(['Outcome DateTime'], axis=1)
-
-# Then we want to separate the month and year information
-outcomes1[['Outcome Month', 'Outcome Year']] = outcomes1['Outcome MonthYear'].str.split(' ', 1, expand=True)
-outcomes1 = outcomes1.drop(['Outcome MonthYear'], axis=1)
-
-outcomes1.info()
-
-
-
-
-
-# %%
-
-# Roadblock1: How to manipulate so many categories for 'Breed' feature  
-# Roadblock2: How to manipulate so many categoires for 'Color' feature
-
-#%%
-## Outcome Type manipulation (Roadblock3): 
-
-# Outcome Type feature has 11 unique values, 
-# which is more than our first though
-# So we try to check and see how to manipulate it into only 2 options
-
-outcomes1['Outcome Type'].value_counts()
-
-## Based on the check, we can of course first erased some meaningless values:
-
-# %%
-in_and_out3.info()
-# %%
-
-
-#%%
-
-## Example modeling code
-# animal type, sex, and neutered/spayed features can be encoded as 1 or 0 directly
-# for breed and color features, like the conversion project from机构, 对它进行nlp的预处理 by unigarm and bigram, 每种不同颜色是一个vector (1 or 0), 然后再encoded?
 
 
