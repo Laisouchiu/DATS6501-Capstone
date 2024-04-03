@@ -259,11 +259,26 @@ plt.show()
 
 #%%
 
+# find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
+
+# just euthanized: not hurting others, saving resources; 
+
+# Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
+# or if some institution (alternative agencies, like 'animal paradies' place, like non-profit orgnaization for animals) and sending them to their
+
+
+#%%
+# don't put in some simple charat, not some simple chart, 
+# like a bar chart with only 2 bars, one bar 50% another 50%, that's so easy to interpret. 
+
+# not some visualizations to help to just show what the data look like,
+# but the visualizations that can help for the business. 
 
 #%%
 # Modeling? \
 # adopted, find out the duration distribution 
 # try to predict the duration (regression model)
+
 
 #%%
 
