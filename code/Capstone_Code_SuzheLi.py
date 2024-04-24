@@ -253,7 +253,9 @@ plt.ylabel('Frequency')
 plt.show()
 
 #%%
-df_clean.info()
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
 
 #%%
 # Neutered conditions
@@ -275,17 +277,101 @@ df_clean['Neutered Status (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambd
 df_clean['Sex (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambda x: 'Male' if 'Male' in x else 'Female' if 'Female' in x else 'Unknown')
 
 # Drop the original column
-df_clean = df_clean.drop('Sex upon Outcome', axis=1)
+columns_to_drop = ['Sex upon Intake', 'Sex upon Outcome']
+df_clean = df_clean.drop(columns_to_drop, axis=1)
 
 # Display the updated DataFrame
 df_clean.info()
 
 #%%
+neutered_dogs = df_clean[(df_clean['Type'] == 'Dog') & (df_clean['Neutered Status (Outcome)'] == 'Neutered')]
+neutered_dogs.info()
 
+#%%
+neutered_cats = df_clean[(df_clean['Type'] == 'Cat') & (df_clean['Neutered Status (Outcome)'] == 'Neutered')]
+neutered_cats.info()
+
+#%%
+neutered_dogs1 = neutered_dogs[neutered_dogs['Duration in Hours']<1000]
+
+plt.figure(figsize=(12,9))
+sns.histplot(neutered_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Neutered Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+plt.show()
+
+
+#%%
+neutered_cats1 = neutered_cats[neutered_cats['Duration in Hours']<1000]
+
+plt.figure(figsize=(12,9))
+sns.histplot(neutered_cats1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Neutered Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+plt.show()
 
 
 #%%
 
+### Plus with Sex to see the resutls (Dogs): 
+
+neutered_dogs_male = neutered_dogs1[neutered_dogs1['Sex (Outcome)'] == 'Male']
+neutered_dogs_female = neutered_dogs1[neutered_dogs1['Sex (Outcome)'] == 'Female']
+
+plt.figure(figsize=(20, 12)) 
+
+# Male dogs subplot
+plt.subplot(1, 2, 1)
+sns.histplot(neutered_dogs_male['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Female dogs subplot
+plt.subplot(1, 2, 2) 
+sns.histplot(neutered_dogs_female['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
+
+
+#%%
+### Plus with Sex to see the resutls (Cats): 
+
+neutered_cats_male = neutered_cats1[neutered_cats1['Sex (Outcome)'] == 'Male']
+neutered_cats_female = neutered_cats1[neutered_cats1['Sex (Outcome)'] == 'Female']
+
+plt.figure(figsize=(20, 12)) 
+
+# Male cats subplot
+plt.subplot(1, 2, 1) 
+sns.histplot(neutered_cats_male['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Female cats subplot
+plt.subplot(1, 2, 2) 
+sns.histplot(neutered_cats_female['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
+
+#%%
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+#%%
+
+#%%
 # Part.2. 
 # --- --- Objective: From adopter's perspectives, help to 'Increasing adopted persons'
 # --- --- Visualize by location,
