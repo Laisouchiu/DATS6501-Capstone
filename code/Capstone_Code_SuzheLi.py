@@ -187,11 +187,6 @@ sns.set_theme(style='darkgrid')
 # --- --- In order to see which category needs more help 
 
 
-# Part.2. 
-# --- --- Objective: From adopter's perspectives, help to 'Increasing adopted persons'
-# --- --- Visualize by location,
-# --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
-
 
 #%%
 # Convert the datetime into total hours 
@@ -240,7 +235,7 @@ df_cats1 = df_cats[df_cats['Duration in Hours']<1000]
 df_cats1.info()
 
 #%%
-# Distribution of Dogs within 'Stay Long' threshold
+# Distribution of overall Dogs within 'Stay Long' threshold
 plt.figure(figsize=(11,8))
 sns.histplot(df_dogs1['Duration in Hours'], bins=24, kde=True)
 plt.title('Distribution of Adopted Time (Dogs)')
@@ -249,13 +244,52 @@ plt.ylabel('Frequency')
 plt.show()
 
 #%%
-# Distribution of Cats within 'Stay Long' threshold
+# Distribution of overall Cats within 'Stay Long' threshold
 plt.figure(figsize=(11,8))
 sns.histplot(x='Duration in Hours', data=df_cats1, bins=24, kde=True)
 plt.title('Distribution of Adopted Time (Cats)')
 plt.xlabel('Hour of the Day')
 plt.ylabel('Frequency')
 plt.show()
+
+#%%
+df_clean.info()
+
+#%%
+# Neutered conditions
+
+df_clean['Sex upon Outcome'].unique()
+
+# " Neutered" and "Spayed" both refer to animals that have been surgically sterilized to prevent reproduction, but they apply to different genders:
+# - Neutered typically refers to male animals that have had their testicles removed.
+# - Spayed refers to female animals that have had their ovaries and usually their uterus removed.
+
+# Intact Male: A male animal that has not been neutered; it still has its testicles.
+# Intact Female: A female animal that has not been spayed; it still has its ovaries and usually the uterus.
+
+#%%
+# Create a new column for neutered status
+df_clean['Neutered Status (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambda x: 'Neutered' if 'Neutered' in x or 'Spayed' in x else 'Intact' if 'Intact' in x else 'Unknown')
+
+# Create a new column for sex
+df_clean['Sex (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambda x: 'Male' if 'Male' in x else 'Female' if 'Female' in x else 'Unknown')
+
+# Drop the original column
+df_clean = df_clean.drop('Sex upon Outcome', axis=1)
+
+# Display the updated DataFrame
+df_clean.info()
+
+#%%
+
+
+
+#%%
+
+# Part.2. 
+# --- --- Objective: From adopter's perspectives, help to 'Increasing adopted persons'
+# --- --- Visualize by location,
+# --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
 
 #%%
 
