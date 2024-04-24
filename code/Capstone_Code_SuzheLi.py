@@ -277,7 +277,7 @@ df_clean['Neutered Status (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambd
 df_clean['Sex (Outcome)'] = df_clean['Sex upon Outcome'].apply(lambda x: 'Male' if 'Male' in x else 'Female' if 'Female' in x else 'Unknown')
 
 # Drop the original column
-columns_to_drop = ['Sex upon Intake', 'Sex upon Outcome']
+columns_to_drop = ['Sex upon Intake', 'Sex upon Outcome', 'Duration in Shelter']
 df_clean = df_clean.drop(columns_to_drop, axis=1)
 
 # Display the updated DataFrame
@@ -285,31 +285,54 @@ df_clean.info()
 
 #%%
 neutered_dogs = df_clean[(df_clean['Type'] == 'Dog') & (df_clean['Neutered Status (Outcome)'] == 'Neutered')]
+intact_dogs = df_clean[(df_clean['Type'] == 'Dog') & (df_clean['Neutered Status (Outcome)'] == 'Intact')]
 neutered_dogs.info()
 
 #%%
 neutered_cats = df_clean[(df_clean['Type'] == 'Cat') & (df_clean['Neutered Status (Outcome)'] == 'Neutered')]
+intact_cats = df_clean[(df_clean['Type'] == 'Cat') & (df_clean['Neutered Status (Outcome)'] == 'Intact')]
 neutered_cats.info()
 
 #%%
 neutered_dogs1 = neutered_dogs[neutered_dogs['Duration in Hours']<1000]
+intact_dogs1 = intact_dogs[intact_dogs['Duration in Hours']<1000]
 
-plt.figure(figsize=(12,9))
+plt.figure(figsize=(25,15))
+
+plt.subplot(1, 2, 1)
 sns.histplot(neutered_dogs1['Duration in Hours'], bins=24, kde=True)
 plt.title('Distribution of Adopted Time (Neutered Dogs)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
-plt.show()
 
+plt.subplot(1, 2, 2)
+sns.histplot(intact_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout()
+plt.show()
 
 #%%
 neutered_cats1 = neutered_cats[neutered_cats['Duration in Hours']<1000]
+intact_cats1 = intact_cats[intact_cats['Duration in Hours']<1000]
 
 plt.figure(figsize=(12,9))
+
+plt.subplot(1, 2, 1)
 sns.histplot(neutered_cats1['Duration in Hours'], bins=24, kde=True)
 plt.title('Distribution of Adopted Time (Neutered Cats)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(1, 2, 2)
+sns.histplot(intact_cats1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout()
 plt.show()
 
 
@@ -370,6 +393,9 @@ plt.show()
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
 #%%
+# Adoption duration by different age of animal 
+
+
 
 #%%
 # Part.2. 
