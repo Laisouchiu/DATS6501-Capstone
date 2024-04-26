@@ -477,7 +477,19 @@ plt.ylabel('Frequency', fontsize=12)
 plt.tight_layout() 
 plt.show()
 
+#%%
+# Scatterplot to understand relationship between 2 numerical variables: Outcome Age & Shelter Duration
+plt.figure(figsize=(10, 6))
+sns.regplot(data=df_clean, 
+            x='Age upon Outcome (Year)', 
+            y='Duration in Hours', 
+            scatter_kws={'alpha': 0.6})
 
+plt.title('Scatter Plot of Outcome Age vs. Duration in Hours with Trend Line', fontsize=14)
+plt.xlabel('Age upon Outcome (Years)', fontsize=12)
+plt.ylabel('Duration in Shelter (Hours)', fontsize=12)
+
+plt.show()
 
 #%%
 
