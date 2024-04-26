@@ -561,9 +561,7 @@ plt.show()
 #%%
 
 # find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
-
 # just euthanized: not hurting others, saving resources; 
-
 # Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
 # or if some institution (alternative agencies, like 'animal paradies' place, like non-profit orgnaization for animals) and sending them to their
 
@@ -575,32 +573,17 @@ plt.show()
 # not some visualizations to help to just show what the data look like,
 # but the visualizations that can help for the business. 
 
+
 #%%
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+
+#%%
+
 # Modeling? \
 # adopted, find out the duration distribution 
 # try to predict the duration (regression model)
-
-
-#%%
-
-
-
-#%%
-# Threshold? : 
-# 1). Generally, an animal is considered to have a long shelter stay 
-#     if it remains unadopted past the average time animals are usually adopted within that facility or community; 
-# 2). Some animals may consider a stay of 2-3 months as long because of their income situation or that shelter is a Short-term shelters, 
-#     and the goal is to find homes for animals as quickly as possible, 
-#     but some Long-term shelters may have a different perspective, 
-#     where animals can stay for years if necessary, making a "long" stay a much more extended period.
-
-
-# Ask: Longest period animal can stay in the shelter
-
-# For now, because we are using the dataset from Austin Animal Center, 
-# which is a big organization, and also this project is for a comprehensive goal for every animal shelters, 
-# so maybe using the Average adopted time as the threshold in my data pipeline would be a nice choice? 
-
-
 
 
