@@ -564,14 +564,21 @@ plt.ylabel('Frequency', fontsize=12)
 plt.tight_layout() 
 plt.show()
 
+
 #%%
 # Part.2. 
 # --- --- Objective: From adopter's perspectives, help to 'Increasing adopted persons'
 # --- --- Visualize by location,
 # --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
 
-#%%
 
+#%%
+# Split the 'Found Location' column on ' in ', which includes the space before and after 'in' to ensure clean splits.
+df_clean[['Specific Location', 'City & State']] = df_clean['Found Location'].str.split(' in ', expand=True, n=1)
+
+df_clean.info()
+
+#%%
 # find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
 # just euthanized: not hurting others, saving resources; 
 # Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
@@ -591,6 +598,17 @@ plt.show()
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
+
+#%%
+
+# df_clean['Intake Type'].value_counts(): 
+# Stray                 121600
+# Owner Surrender        36335
+# Public Assist          11663
+# Abandoned               1449
+# Euthanasia Request       251
+# Wildlife                   1
+# Name: Intake Type, dtype: int64
 
 #%%
 
