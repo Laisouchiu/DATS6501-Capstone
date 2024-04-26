@@ -395,7 +395,120 @@ plt.show()
 #%%
 # Adoption duration by different age of animal 
 
+# <1 year age is considered as a Puppy
+puppy_dogs = df_dogs[df_dogs['Age upon Outcome (Year)'] <= 1]
+puppy_dogs1 = puppy_dogs[puppy_dogs['Duration in Hours'] < 1000]
 
+# 1-7 year(s) age is considered as an Adult: 
+adult_dogs = df_dogs[ (df_dogs['Age upon Outcome (Year)'] > 1) & (df_dogs['Age upon Outcome (Year)'] <= 7)]
+adult_dogs1 = adult_dogs[adult_dogs['Duration in Hours'] < 1000]
+
+# >7 years age is considered as a Senior
+senior_dogs = df_dogs[df_dogs['Age upon Outcome (Year)'] > 7]
+senior_dogs1 = senior_dogs[senior_dogs['Duration in Hours'] < 1000]
+
+# Create visualizations (subplots) to compare the adopted time distribution of dogs with different aging
+plt.figure(figsize=(20, 12)) 
+
+# Puppy dogs subplot subplot
+plt.subplot(1, 3, 1) 
+sns.histplot(puppy_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Puppy Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Adult dogs suplot
+plt.subplot(1, 3, 2) 
+sns.histplot(adult_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Adult Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Senior dogs suplot
+plt.subplot(1, 3, 3) 
+sns.histplot(senior_dogs1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Senior Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+
+plt.tight_layout() 
+plt.show()
+
+#%%
+
+# <1 year age is considered as a Puppy
+kitten_cats = df_cats[df_cats['Age upon Outcome (Year)'] <= 1]
+kitten_cats1 = kitten_cats[kitten_cats['Duration in Hours'] < 1000]
+
+# 1-7 year(s) age is considered as an Adult: 
+adult_cats = df_cats[ (df_cats['Age upon Outcome (Year)'] > 1) & (df_cats['Age upon Outcome (Year)'] <= 7)]
+adult_cats1 = adult_cats[adult_cats['Duration in Hours'] < 1000]
+
+# >7 years age is considered as a Senior
+senior_cats = df_cats[df_cats['Age upon Outcome (Year)'] > 7]
+senior_cats1 = senior_cats[senior_cats['Duration in Hours'] < 1000]
+
+# Create visualizations (subplots) to compare the adopted time distribution of cats with different aging
+plt.figure(figsize=(20, 12)) 
+
+# Puppy dogs subplot subplot
+plt.subplot(1, 3, 1) 
+sns.histplot(kitten_cats1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Kitten Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Adult dogs suplot
+plt.subplot(1, 3, 2) 
+sns.histplot(adult_cats1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Adult Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Senior dogs suplot
+plt.subplot(1, 3, 3) 
+sns.histplot(senior_cats1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Senior Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+
+plt.tight_layout() 
+plt.show()
+
+
+
+#%%
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+
+#%%
+
+df_clean['Intake Condition'].value_counts()
+
+# Strategy for Re-categorization the 'Income Condition' column & Group by General Health Status:
+# - Healthy: Include 'Normal'.
+# - Medical Attention Needed: Include 'Injured', 'Sick', 'Medical', 'Med Attn', 'Med Urgent', 'Neurologic', 'Agonal', 'Congenital', 'Panleuk'.
+# - Special Care Required: Include 'Nursing', 'Neonatal', 'Pregnant'.
+# - Behavioral or Other Issues: Include 'Aged', 'Feral', 'Behavior', 'Other', 'Space'.
+
+# Implement Re-categorization staregy by code:
+condition_mapping = {
+    'Normal': 'Healthy', 
+    'Injured': 'Medical Attention Needed', 'Sick': 'Medical Attention Needed', 'Medical': 'Medical Attention Needed', 'Med Attn': 'Medical Attention Needed', 'Med Urgent': 'Medical Attention Needed', 'Neurologic': 'Medical Attention Needed', 'Agonal': 'Medical Attention Needed', 'Congenital': 'Medical Attention Needed', 'Panleuk': 'Medical Attention Needed',
+    'Nursing': 'Special Care Required', 'Neonatal': 'Special Care Required', 'Pregnant': 'Special Care Required', 
+    'Aged': 'Behavioral or Other Issues', 'Feral': 'Behavioral or Other Issues', 'Behavior': 'Behavioral or Other Issues', 'Other': 'Behavioral or Other Issues', 'Space': 'Behavioral or Other Issues'
+}
+
+# Apply the mapping to the 'Intake Condition' column
+df_clean['Intake Condition (Health Status)'] = df_clean['Intake Condition'].map(condition_mapping).fillna('Unknown')
+
+# Check the new value counts
+df_clean['Intake Condition (Health Status)'].value_counts()
+
+# Create visualizations (subplots) to compare the adopted time distribution of animals with different intake conditions
 
 #%%
 # Part.2. 
