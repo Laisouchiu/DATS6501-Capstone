@@ -508,7 +508,49 @@ df_clean['Intake Condition (Health Status)'] = df_clean['Intake Condition'].map(
 # Check the new value counts
 df_clean['Intake Condition (Health Status)'].value_counts()
 
+#%%
+normal_health = df_clean[df_clean['Intake Condition (Health Status)'] == 'Healthy']
+normal_health1 = normal_health[normal_health['Duration in Hours'] < 1000]
+
+attention_needed = df_clean[df_clean['Intake Condition (Health Status)'] == 'Medical Attention Needed']
+attention_needed1 = attention_needed[attention_needed['Duration in Hours'] < 1000]
+
+special_care = df_clean[df_clean['Intake Condition (Health Status)'] == 'Special Care Required']
+special_care1 = special_care[special_care['Duration in Hours'] < 1000]
+
+behavioral_others = df_clean[df_clean['Intake Condition (Health Status)'] == 'Behavioral or Other Issues']
+behavioral_others1 = behavioral_others[behavioral_others['Duration in Hours'] < 1000]
+
+
 # Create visualizations (subplots) to compare the adopted time distribution of animals with different intake conditions
+plt.figure(figsize=(20, 12)) 
+
+plt.subplot(2, 2, 1) 
+sns.histplot(normal_health1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Healthy Animals)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 2) 
+sns.histplot(attention_needed1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Animals need attention)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 3) 
+sns.histplot(special_care1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Animals need special care)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 4) 
+sns.histplot(behavioral_others1['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Others)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
 
 #%%
 # Part.2. 
