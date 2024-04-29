@@ -572,11 +572,48 @@ plt.show()
 # --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
 
 
+
+
 #%%
 # Split the 'Found Location' column on ' in ', which includes the space before and after 'in' to ensure clean splits.
-df_clean[['Specific Location', 'City & State']] = df_clean['Found Location'].str.split(' in ', expand=True, n=1)
 
+pd.DataFrame(df_clean['Found Location'].value_counts()).head(20)
+# Use "if...then" to add more cases to clean the data. 
+# 三种process的情况：
+# - Specific address in City (State)
+# - City (State)
+# - Outside Jurisdiction
+
+#%%
+def extract_location_parts(location):
+    if 'Outside Jurisdiction' in location:
+        return pd.Series(['Not Specified', 'Outside Jurisdiction'])
+    elif ' in ' in location:
+        parts = location.split(' in ')
+        specific_location = parts[0].strip()
+        city_state = parts[1].strip()
+        return pd.Series([specific_location, city_state])
+    elif '(' in location:
+        return pd.Series(['Not Specified', location])
+    else:
+        return pd.Series(['Not Specified', 'Unknown'])
+
+# Apply the function and assign the results to new columns
+df_clean[['Specific Location', 'City & State']] = df_clean['Found Location'].apply(extract_location_parts)
 df_clean.info()
+# df_clean[['Specific Location', 'City & State']] = df_clean['Found Location'].str.split(' in ', expand=True, n=1)
+# df_clean.info()
+
+#%%
+not_specified = df_clean[df_clean['Specific Location'] == 'Not Specified']
+not_specified.info()
+
+specified_locations = df_clean[df_clean['Specific Location'] != 'Not Specified']
+specified_locations.info()
+
+# Maybe can use some GIS method visualizations to deal with location that has specified locations
+# For the others only with city and states, we can just use normal visualizations. 
+
 
 #%%
 # find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
