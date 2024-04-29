@@ -4,6 +4,10 @@ import numpy as np
 import pandas as pd 
 import os
 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import geopandas as gpd
 # %%
 # Shelter datasets from Austin Animal Center
 
@@ -175,8 +179,6 @@ duration_mean = euthanized['Duration in Shelter'].mean()
 
 #%%
 # Visualization: 
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 sns.set_theme(style='darkgrid')
 
@@ -571,9 +573,6 @@ plt.show()
 # --- --- Visualize by location,
 # --- --- Think about the argument about which if the location will affect the adoption rate or other things (e.g. rural to city)
 
-
-
-
 #%%
 # Split the 'Found Location' column on ' in ', which includes the space before and after 'in' to ensure clean splits.
 
@@ -605,14 +604,19 @@ df_clean.info()
 # df_clean.info()
 
 #%%
-not_specified = df_clean[df_clean['Specific Location'] == 'Not Specified']
-not_specified.info()
 
-specified_locations = df_clean[df_clean['Specific Location'] != 'Not Specified']
-specified_locations.info()
+# df_clean.to_csv('visualization_data.csv', index=False)
+
+#%%
+# not_specified = df_clean[df_clean['Specific Location'] == 'Not Specified']
+# not_specified.info()
+
+# specified_locations = df_clean[df_clean['Specific Location'] != 'Not Specified']
+# specified_locations.info()
 
 # Maybe can use some GIS method visualizations to deal with location that has specified locations
 # For the others only with city and states, we can just use normal visualizations. 
+
 
 
 #%%
@@ -635,17 +639,6 @@ specified_locations.info()
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
-
-#%%
-
-# df_clean['Intake Type'].value_counts(): 
-# Stray                 121600
-# Owner Surrender        36335
-# Public Assist          11663
-# Abandoned               1449
-# Euthanasia Request       251
-# Wildlife                   1
-# Name: Intake Type, dtype: int64
 
 #%%
 
