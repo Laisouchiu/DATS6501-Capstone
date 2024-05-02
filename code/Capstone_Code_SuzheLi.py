@@ -622,6 +622,7 @@ df_clean.info()
 #%%
 # find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
 # just euthanized: not hurting others, saving resources; 
+
 # Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
 # or if some institution (alternative agencies, like 'animal paradies' place, like non-profit orgnaization for animals) and sending them to their
 
