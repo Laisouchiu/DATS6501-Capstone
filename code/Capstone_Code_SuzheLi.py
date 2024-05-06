@@ -618,6 +618,12 @@ df_clean.info()
 # For the others only with city and states, we can just use normal visualizations. 
 
 
+#%%
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+
 
 #%%
 # find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
@@ -626,13 +632,222 @@ df_clean.info()
 # Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
 # or if some institution (alternative agencies, like 'animal paradies' place, like non-profit orgnaization for animals) and sending them to their
 
+#%%
+
+neutered_dogs2 = neutered_dogs[neutered_dogs['Duration in Hours']>1000]
+intact_dogs2 = intact_dogs[intact_dogs['Duration in Hours']>1000]
+
+plt.figure(figsize=(25,15))
+
+plt.subplot(1, 2, 1)
+sns.histplot(neutered_dogs2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Neutered Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(1, 2, 2)
+sns.histplot(intact_dogs2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout()
+plt.show()
+
 
 #%%
-# don't put in some simple charat, not some simple chart, 
-# like a bar chart with only 2 bars, one bar 50% another 50%, that's so easy to interpret. 
 
-# not some visualizations to help to just show what the data look like,
-# but the visualizations that can help for the business. 
+# Again, plus the sex to see the result (Dogs)
+
+neutered_dogs_male_long = neutered_dogs2[neutered_dogs2['Sex (Outcome)'] == 'Male']
+neutered_dogs_female_long = neutered_dogs2[neutered_dogs2['Sex (Outcome)'] == 'Female']
+
+plt.figure(figsize=(20, 12)) 
+
+# Male dogs subplot
+plt.subplot(1, 2, 1)
+sns.histplot(neutered_dogs_male_long['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Female dogs subplot
+plt.subplot(1, 2, 2) 
+sns.histplot(neutered_dogs_female_long['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
+
+
+#%%
+
+neutered_cats2 = neutered_cats[neutered_cats['Duration in Hours']>1000]
+intact_cats2 = intact_cats[intact_cats['Duration in Hours']>1000]
+
+plt.figure(figsize=(12,9))
+
+plt.subplot(1, 2, 1)
+sns.histplot(neutered_cats2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Neutered Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(1, 2, 2)
+sns.histplot(intact_cats2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout()
+plt.show()
+
+
+
+#%%
+
+## Again, plus with sex to see the resutls (Cats): 
+
+neutered_cats_male_long = neutered_cats2[neutered_cats2['Sex (Outcome)'] == 'Male']
+neutered_cats_female_long = neutered_cats2[neutered_cats2['Sex (Outcome)'] == 'Female']
+
+plt.figure(figsize=(20, 12)) 
+
+# Male cats subplot
+plt.subplot(1, 2, 1) 
+sns.histplot(neutered_cats_male_long['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Female cats subplot
+plt.subplot(1, 2, 2) 
+sns.histplot(neutered_cats_female_long['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
+
+
+
+#%%
+normal_health2 = normal_health[normal_health['Duration in Hours'] > 1000]
+
+attention_needed2 = attention_needed[attention_needed['Duration in Hours'] > 1000]
+
+special_care2 = special_care[special_care['Duration in Hours'] > 1000]
+
+behavioral_others2 = behavioral_others[behavioral_others['Duration in Hours'] > 1000]
+
+
+# Create visualizations (subplots) to compare the adopted time distribution of animals with different intake conditions
+plt.figure(figsize=(20, 12)) 
+
+plt.subplot(2, 2, 1) 
+sns.histplot(normal_health2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Healthy Animals)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 2) 
+sns.histplot(attention_needed2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Animals need attention)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 3) 
+sns.histplot(special_care2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Animals need special care)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.subplot(2, 2, 4) 
+sns.histplot(behavioral_others2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Others)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+plt.tight_layout() 
+plt.show()
+
+
+
+#%%
+# Adoption duration by different age of animal 
+
+puppy_dogs2 = puppy_dogs[puppy_dogs['Duration in Hours'] > 1000]
+
+adult_dogs2 = adult_dogs[adult_dogs['Duration in Hours'] > 1000]
+
+senior_dogs2 = senior_dogs[senior_dogs['Duration in Hours'] > 1000]
+
+# Create visualizations (subplots) to compare the adopted time distribution of dogs with different aging
+plt.figure(figsize=(20, 12)) 
+
+# Puppy dogs subplot subplot
+plt.subplot(1, 3, 1) 
+sns.histplot(puppy_dogs2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Puppy Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Adult dogs suplot
+plt.subplot(1, 3, 2) 
+sns.histplot(adult_dogs2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Adult Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Senior dogs suplot
+plt.subplot(1, 3, 3) 
+sns.histplot(senior_dogs2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Senior Dogs)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+
+plt.tight_layout() 
+plt.show()
+
+#%%
+
+kitten_cats2 = kitten_cats[kitten_cats['Duration in Hours'] > 1000]
+
+adult_cats2 = adult_cats[adult_cats['Duration in Hours'] > 1000]
+
+senior_cats2 = senior_cats[senior_cats['Duration in Hours'] > 1000]
+
+# Create visualizations (subplots) to compare the adopted time distribution of cats with different aging
+plt.figure(figsize=(20, 12)) 
+
+# Puppy dogs subplot subplot
+plt.subplot(1, 3, 1) 
+sns.histplot(kitten_cats2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Kitten Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Adult dogs suplot
+plt.subplot(1, 3, 2) 
+sns.histplot(adult_cats2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Adult Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+# Senior dogs suplot
+plt.subplot(1, 3, 3) 
+sns.histplot(senior_cats2['Duration in Hours'], bins=24, kde=True)
+plt.title('Distribution of Duration (Senior Cats)', fontsize=15)
+plt.xlabel('Hour of the Day', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+
+
+plt.tight_layout() 
+plt.show()
 
 
 #%%
@@ -648,3 +863,11 @@ df_clean.info()
 # try to predict the duration (regression model)
 
 
+#%%
+# For the paper: 
+
+# don't put in some simple charat, not some simple chart, 
+# like a bar chart with only 2 bars, one bar 50% another 50%, that's so easy to interpret. 
+
+# not some visualizations to help to just show what the data look like,
+# but the visualizations that can help for the business. 
