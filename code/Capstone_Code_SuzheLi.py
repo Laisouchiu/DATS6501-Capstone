@@ -493,6 +493,7 @@ plt.ylabel('Duration in Shelter (Hours)', fontsize=12)
 
 plt.show()
 
+
 #%%
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
@@ -641,13 +642,13 @@ plt.figure(figsize=(25,15))
 
 plt.subplot(1, 2, 1)
 sns.histplot(neutered_dogs2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Adopted Time (Neutered Dogs)', fontsize=15)
+plt.title('Distribution of Adopted Time (Neutered Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(1, 2, 2)
 sns.histplot(intact_dogs2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.title('Distribution of Adopted Time (Intact Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -667,14 +668,14 @@ plt.figure(figsize=(20, 12))
 # Male dogs subplot
 plt.subplot(1, 2, 1)
 sns.histplot(neutered_dogs_male_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Neutered Male Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Female dogs subplot
 plt.subplot(1, 2, 2) 
 sns.histplot(neutered_dogs_female_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Neutered Female Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -691,13 +692,13 @@ plt.figure(figsize=(12,9))
 
 plt.subplot(1, 2, 1)
 sns.histplot(neutered_cats2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Adopted Time (Neutered Cats)', fontsize=15)
+plt.title('Distribution of Adopted Time (Neutered Cats - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(1, 2, 2)
 sns.histplot(intact_cats2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.title('Distribution of Adopted Time (Intact Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -718,14 +719,14 @@ plt.figure(figsize=(20, 12))
 # Male cats subplot
 plt.subplot(1, 2, 1) 
 sns.histplot(neutered_cats_male_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Male Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Neutered Male Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Female cats subplot
 plt.subplot(1, 2, 2) 
 sns.histplot(neutered_cats_female_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Female Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Neutered Female Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -749,25 +750,25 @@ plt.figure(figsize=(20, 12))
 
 plt.subplot(2, 2, 1) 
 sns.histplot(normal_health2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Healthy Animals)', fontsize=15)
+plt.title('Distribution of Duration (Healthy Animals - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(2, 2, 2) 
 sns.histplot(attention_needed2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Animals need attention)', fontsize=15)
+plt.title('Distribution of Duration (Animals need attention - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(2, 2, 3) 
 sns.histplot(special_care2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Animals need special care)', fontsize=15)
+plt.title('Distribution of Duration (Animals need special care - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(2, 2, 4) 
 sns.histplot(behavioral_others2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Others)', fontsize=15)
+plt.title('Distribution of Duration (Others - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -791,21 +792,21 @@ plt.figure(figsize=(20, 12))
 # Puppy dogs subplot subplot
 plt.subplot(1, 3, 1) 
 sns.histplot(puppy_dogs2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Puppy Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Puppy Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Adult dogs suplot
 plt.subplot(1, 3, 2) 
 sns.histplot(adult_dogs2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Adult Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Adult Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Senior dogs suplot
 plt.subplot(1, 3, 3) 
 sns.histplot(senior_dogs2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Senior Dogs)', fontsize=15)
+plt.title('Distribution of Duration (Senior Dogs - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -827,21 +828,21 @@ plt.figure(figsize=(20, 12))
 # Puppy dogs subplot subplot
 plt.subplot(1, 3, 1) 
 sns.histplot(kitten_cats2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Kitten Cats)', fontsize=15)
+plt.title('Distribution of Duration (Kitten Cats - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Adult dogs suplot
 plt.subplot(1, 3, 2) 
 sns.histplot(adult_cats2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Adult Cats)', fontsize=15)
+plt.title('Distribution of Duration (Adult Cats - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
 # Senior dogs suplot
 plt.subplot(1, 3, 3) 
 sns.histplot(senior_cats2['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Senior Cats)', fontsize=15)
+plt.title('Distribution of Duration (Senior Cats - Long Stay)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -854,13 +855,6 @@ plt.show()
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
-
-
-#%%
-
-# Modeling? \
-# adopted, find out the duration distribution 
-# try to predict the duration (regression model)
 
 
 #%%
