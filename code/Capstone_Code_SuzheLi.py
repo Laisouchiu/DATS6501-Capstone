@@ -478,8 +478,10 @@ plt.show()
 
 #%%
 # Scatterplot to understand relationship between 2 numerical variables: Outcome Age & Shelter Duration
+df_clean1 = df_clean[df_clean['Age upon Outcome (Year)']>0]
+
 plt.figure(figsize=(10, 6))
-sns.regplot(data=df_clean, 
+sns.regplot(data=df_clean1, 
             x='Age upon Outcome (Year)', 
             y='Duration in Hours', 
             scatter_kws={'alpha': 0.6})
