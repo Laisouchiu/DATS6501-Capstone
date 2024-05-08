@@ -330,7 +330,7 @@ plt.ylabel('Frequency', fontsize=12)
 
 plt.subplot(1, 2, 2)
 sns.histplot(intact_cats1['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Adopted Time (Intact Dogs)', fontsize=15)
+plt.title('Distribution of Adopted Time (Intact Cats)', fontsize=15)
 plt.xlabel('Hour of the Day', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 
@@ -390,9 +390,6 @@ plt.ylabel('Frequency', fontsize=12)
 plt.tight_layout() 
 plt.show()
 
-#%%
-
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
 #%%
 # Adoption duration by different age of animal 
@@ -492,11 +489,6 @@ plt.xlabel('Age upon Outcome (Years)', fontsize=12)
 plt.ylabel('Duration in Shelter (Hours)', fontsize=12)
 
 plt.show()
-
-
-#%%
-
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
 
 #%%
@@ -627,7 +619,7 @@ df_clean.info()
 
 
 #%%
-# find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
+# Find reasons behind why they stayed for too long, it's okay without hurting the resources on other animals
 # just euthanized: not hurting others, saving resources; 
 
 # Idenitfying these stay 'too long' animals, find reasons behind it and see if some animal can be euthanzied, 
@@ -635,8 +627,8 @@ df_clean.info()
 
 #%%
 
-neutered_dogs2 = neutered_dogs[neutered_dogs['Duration in Hours']>1000]
-intact_dogs2 = intact_dogs[intact_dogs['Duration in Hours']>1000]
+neutered_dogs2 = neutered_dogs[(neutered_dogs['Duration in Hours']>1000) & (neutered_dogs['Duration in Hours']<15000)]
+intact_dogs2 = intact_dogs[(intact_dogs['Duration in Hours']>1000) & (intact_dogs['Duration in Hours']<15000)]
 
 plt.figure(figsize=(25,15))
 
@@ -656,37 +648,11 @@ plt.tight_layout()
 plt.show()
 
 
-#%%
-
-# Again, plus the sex to see the result (Dogs)
-
-neutered_dogs_male_long = neutered_dogs2[neutered_dogs2['Sex (Outcome)'] == 'Male']
-neutered_dogs_female_long = neutered_dogs2[neutered_dogs2['Sex (Outcome)'] == 'Female']
-
-plt.figure(figsize=(20, 12)) 
-
-# Male dogs subplot
-plt.subplot(1, 2, 1)
-sns.histplot(neutered_dogs_male_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Male Dogs - Long Stay)', fontsize=15)
-plt.xlabel('Hour of the Day', fontsize=12)
-plt.ylabel('Frequency', fontsize=12)
-
-# Female dogs subplot
-plt.subplot(1, 2, 2) 
-sns.histplot(neutered_dogs_female_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Female Dogs - Long Stay)', fontsize=15)
-plt.xlabel('Hour of the Day', fontsize=12)
-plt.ylabel('Frequency', fontsize=12)
-
-plt.tight_layout() 
-plt.show()
-
 
 #%%
 
-neutered_cats2 = neutered_cats[neutered_cats['Duration in Hours']>1000]
-intact_cats2 = intact_cats[intact_cats['Duration in Hours']>1000]
+neutered_cats2 = neutered_cats[(neutered_cats['Duration in Hours'] > 1000) & (neutered_cats['Duration in Hours'] < 6000)]
+intact_cats2 = intact_cats[(intact_cats['Duration in Hours'] > 1000) & (intact_cats['Duration in Hours'] < 5000)]
 
 plt.figure(figsize=(12,9))
 
@@ -708,41 +674,13 @@ plt.show()
 
 
 #%%
+normal_health2 = normal_health[(normal_health['Duration in Hours'] > 1000) & (normal_health['Duration in Hours'] < 10000)]
 
-## Again, plus with sex to see the resutls (Cats): 
+attention_needed2 = attention_needed[(attention_needed['Duration in Hours'] > 1000) & (attention_needed['Duration in Hours'] < 10000)]
 
-neutered_cats_male_long = neutered_cats2[neutered_cats2['Sex (Outcome)'] == 'Male']
-neutered_cats_female_long = neutered_cats2[neutered_cats2['Sex (Outcome)'] == 'Female']
+special_care2 = special_care[(special_care['Duration in Hours'] > 1000) & (special_care['Duration in Hours'] < 6000)]
 
-plt.figure(figsize=(20, 12)) 
-
-# Male cats subplot
-plt.subplot(1, 2, 1) 
-sns.histplot(neutered_cats_male_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Male Dogs - Long Stay)', fontsize=15)
-plt.xlabel('Hour of the Day', fontsize=12)
-plt.ylabel('Frequency', fontsize=12)
-
-# Female cats subplot
-plt.subplot(1, 2, 2) 
-sns.histplot(neutered_cats_female_long['Duration in Hours'], bins=24, kde=True)
-plt.title('Distribution of Duration (Neutered Female Dogs - Long Stay)', fontsize=15)
-plt.xlabel('Hour of the Day', fontsize=12)
-plt.ylabel('Frequency', fontsize=12)
-
-plt.tight_layout() 
-plt.show()
-
-
-
-#%%
-normal_health2 = normal_health[normal_health['Duration in Hours'] > 1000]
-
-attention_needed2 = attention_needed[attention_needed['Duration in Hours'] > 1000]
-
-special_care2 = special_care[special_care['Duration in Hours'] > 1000]
-
-behavioral_others2 = behavioral_others[behavioral_others['Duration in Hours'] > 1000]
+behavioral_others2 = behavioral_others[(behavioral_others['Duration in Hours'] > 1000) & (behavioral_others['Duration in Hours'] < 10000)]
 
 
 # Create visualizations (subplots) to compare the adopted time distribution of animals with different intake conditions
@@ -780,11 +718,11 @@ plt.show()
 #%%
 # Adoption duration by different age of animal 
 
-puppy_dogs2 = puppy_dogs[puppy_dogs['Duration in Hours'] > 1000]
+puppy_dogs2 = puppy_dogs[(puppy_dogs['Duration in Hours'] > 1000) & (puppy_dogs['Duration in Hours'] < 15000)]
 
-adult_dogs2 = adult_dogs[adult_dogs['Duration in Hours'] > 1000]
+adult_dogs2 = adult_dogs[(adult_dogs['Duration in Hours'] > 1000) & (adult_dogs['Duration in Hours'] <15000)]
 
-senior_dogs2 = senior_dogs[senior_dogs['Duration in Hours'] > 1000]
+senior_dogs2 = senior_dogs[(senior_dogs['Duration in Hours'] > 1000) & (senior_dogs['Duration in Hours'] < 15000)]
 
 # Create visualizations (subplots) to compare the adopted time distribution of dogs with different aging
 plt.figure(figsize=(20, 12)) 
@@ -816,11 +754,11 @@ plt.show()
 
 #%%
 
-kitten_cats2 = kitten_cats[kitten_cats['Duration in Hours'] > 1000]
+kitten_cats2 = kitten_cats[(kitten_cats['Duration in Hours'] > 1000) & (kitten_cats['Duration in Hours'] < 10000)]
 
-adult_cats2 = adult_cats[adult_cats['Duration in Hours'] > 1000]
+adult_cats2 = adult_cats[(adult_cats['Duration in Hours'] > 1000) & (adult_cats['Duration in Hours'] < 15000)]
 
-senior_cats2 = senior_cats[senior_cats['Duration in Hours'] > 1000]
+senior_cats2 = senior_cats[(senior_cats['Duration in Hours'] > 1000) & (senior_cats['Duration in Hours'] > 15000)]
 
 # Create visualizations (subplots) to compare the adopted time distribution of cats with different aging
 plt.figure(figsize=(20, 12)) 
