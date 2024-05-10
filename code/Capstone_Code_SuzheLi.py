@@ -176,6 +176,10 @@ euthanized_mean = euthanized['Age upon Outcome (Year)'].mean()
 #%%
 duration_mean = euthanized['Duration in Shelter'].mean()
 
+#%%
+# Convert the datetime into total hours 
+df_clean['Duration in Hours'] = df_clean['Duration in Shelter'].dt.total_seconds() / 3600
+df_clean['Duration in Shelter'].head(5)
 
 #%%
 # Visualization: 
@@ -188,12 +192,6 @@ sns.set_theme(style='darkgrid')
 # --- --- Sub-category them, then print out thir adopted time's distribution
 # --- --- In order to see which category needs more help 
 
-
-
-#%%
-# Convert the datetime into total hours 
-df_clean['Duration in Hours'] = df_clean['Duration in Shelter'].dt.total_seconds() / 3600
-df_clean['Duration in Shelter'].head(5)
 
 #%%
 df_clean['Type'].value_counts()
